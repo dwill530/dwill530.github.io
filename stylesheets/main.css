@@ -1699,7 +1699,7 @@ input[type="button"],
   background-color: #1f1815;
   background-attachment: scroll,								scroll;
   background-image: url("../../images/overlay.png"), url("../../images/mtn-bg.jpg");
-  background-position: top left,							top left;
+  background-position: top left,							0px -315px;
   background-repeat: repeat,								no-repeat;
   background-size: auto,								150%;
   color: rgba(255, 255, 255, 0.5);
