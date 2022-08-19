@@ -143,26 +143,26 @@ console.log(fsBTsourceCookie);
 console.log(rsBTsourceCookie);
 
 //Cookie scenerio	
-if ((fsBTsourceCookie === "direct") && (rsBTsourceCookie === "direct") || (fsBTsourceCookie === "www.billtrust.com" && rsBTsourceCookie === "www.billtrust.com") || (fsBTsourceCookie === "direct") && (rsBTsourceCookie === "www.billtrust.com") || (fsBTsourceCookie === "www.billtrust.com" && rsBTsourceCookie === "direct") ) {
+if ((fsBTsourceCookie === "direct") && (rsBTsourceCookie === "direct") || (fsBTsourceCookie === "www.order2cash.com" && rsBTsourceCookie === "www.order2cash.com") || (fsBTsourceCookie === "direct") && (rsBTsourceCookie === "www.order2cash.com") || (fsBTsourceCookie === "www.order2cash.com" && rsBTsourceCookie === "direct") ) {
 	console.log("fs and rs say either direct or bt.com");
 	document.querySelector('input[name="tempString12"]').value = "direct";
 	
-} else if ((fsBTsourceCookie === "direct" && rsBTsourceCookie === "") || (fsBTsourceCookie === "www.billtrust.com" && rsBTsourceCookie === "")) {
+} else if ((fsBTsourceCookie === "direct" && rsBTsourceCookie === "") || (fsBTsourceCookie === "www.order2cash.com" && rsBTsourceCookie === "")) {
 	
 	console.log("fs says direct or bt.com and rs is blank");
 	document.querySelector('input[name="tempString12"]').value = "direct"; //always = direct
 	
-} else if ((fsBTsourceCookie === "direct" && rsBTsourceCookie !== "") || (fsBTsourceCookie === "www.billtrust.com" && rsBTsourceCookie !== "")){
+} else if ((fsBTsourceCookie === "direct" && rsBTsourceCookie !== "") || (fsBTsourceCookie === "www.order2cash.com" && rsBTsourceCookie !== "")){
 	
 	console.log("fs says direct or bt.com and rs is not blank and doesn't equal direct or bt.com");
 	document.querySelector('input[name="tempString12"]').value = rsBTsourceCookie; //capture rs_source cookie
 	
-} else if ((fsBTsourceCookie !== "direct" && rsBTsourceCookie === "") || (fsBTsourceCookie !== "www.billtrust.com" && rsBTsourceCookie === "")){
+} else if ((fsBTsourceCookie !== "direct" && rsBTsourceCookie === "") || (fsBTsourceCookie !== "www.order2cash.com" && rsBTsourceCookie === "")){
 	
 	console.log("fs doesn't equal direct or bt.com and rs is blank");
 	document.querySelector('input[name="tempString12"]').value = rsBTsourceCookie; //capture rs_source cookie
 	
-} else if ((fsBTsourceCookie !== "direct" && rsBTsourceCookie !== "direct") && (fsBTsourceCookie !== "direct" && rsBTsourceCookie !== "www.billtrust.com") && (fsBTsourceCookie !== "www.billtrust.com" && rsBTsourceCookie !== "www.billtrust.com") && (fsBTsourceCookie !== "www.billtrust.com" && rsBTsourceCookie !== "direct")){
+} else if ((fsBTsourceCookie !== "direct" && rsBTsourceCookie !== "direct") && (fsBTsourceCookie !== "direct" && rsBTsourceCookie !== "www.order2cash.com") && (fsBTsourceCookie !== "www.order2cash.com" && rsBTsourceCookie !== "www.order2cash.com") && (fsBTsourceCookie !== "www.order2cash.com" && rsBTsourceCookie !== "direct")){
 	
 	console.log("fs and rs doesn't equal direct or bt.com");
 	document.querySelector('input[name="tempString12"]').value = rsBTsourceCookie; //capture rs_source cookie
@@ -189,7 +189,7 @@ if (btReferrerFinalCookie) {
 //check if referrer is bt.com or 3rd party. if 3rd party check if url includes utms. if not, replace cookie utms with n/a
 	
 //check if referrer contains bt.com or not	
-var cRef = document.referrer.indexOf('https://www.billtrust') == 0;
+var cRef = document.referrer.indexOf('https://www.order2cash') == 0;
 var futmVal = window.location.search.indexOf('?utm') == 0;
 var ref = document.referrer.length == 0;	
 	
@@ -208,9 +208,9 @@ var btUTMt = btCookies.utm_term;
 	
 //if referrer is not bt.com or blank, check if url includes utms. if not, replace cookie utms with n/a, else do nothing
 if ((cRef || ref) && (!futmVal && typeof btUTMs !== 'undefined')) {
-	console.log('referrer is billtrust, no utms in url and utm cookies have values. Do Nothing');
+	console.log('referrer is order2cash, no utms in url and utm cookies have values. Do Nothing');
 } else if ((!cRef || !ref) && (!futmVal && typeof btUTMs !== 'undefined')) {
-	console.log('referrer is not billtrust, no utms in url and utm cookies have values');
+	console.log('referrer is not order2cash, no utms in url and utm cookies have values');
 	
 //Campaign UTM Values
 var fREFcampaign = document.querySelector('input[name="btURLCampaign"]').value;
