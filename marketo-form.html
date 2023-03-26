@@ -69,16 +69,6 @@ MktoForms2.whenReady(function (form) {
 
     form.submittable(false);
 
-    if (currentValue.match(/[^0-9+\-.() ]/g)) {
-      form.showErrorMessage(messages.INVALID_CHARACTERS, elJq);
-      return false;
-    } else if (currentValue.match(/\d/g).length < limits.minDigits ||
-      currentValue.match(/\d/g).length > limits.maxDigits) {
-      form.showErrorMessage(messages.INVALID_DIALABLE_LENGTH, elJq);
-      return false;
-    }
-
-    form.submittable(true);
   }
 
 	form.onSuccess(function (values, followUpUrl) {
@@ -90,7 +80,17 @@ MktoForms2.whenReady(function (form) {
 	  var thanksText = document.getElementsByClassName("form-msg")[0];
 	  thanksText.style.display = "block";
 	  //return false to prevent the submission handler from taking the lead to the follow up url.
-	  return false;
+	  //return false;
+    if (currentValue.match(/[^0-9+\-.() ]/g)) {
+      form.showErrorMessage(messages.INVALID_CHARACTERS, elJq);
+      return false;
+    } else if (currentValue.match(/\d/g).length < limits.minDigits ||
+      currentValue.match(/\d/g).length > limits.maxDigits) {
+      form.showErrorMessage(messages.INVALID_DIALABLE_LENGTH, elJq);
+      return false;
+    }
+
+    form.submittable(true);
 	});
 
 });
