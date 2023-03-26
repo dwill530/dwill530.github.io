@@ -34,7 +34,52 @@
 <form id="mktoForm_4424"></form> 
 <script>MktoForms2.loadForm("//mktg.billtrust.com", "301-ZGZ-364", 4424);</script>
 
-<!-- Marketo Script to hide form and display confirmation message -->
+<script type="application/javascript">
+ MktoForms2.whenReady(function(mktoForm) {
+  
+  let initialValues = mktoForm.getValues();
+  
+  if("Phone" in initialValues) {
+    mktoForm.onValidate(validatePhone);
+  }
+
+  function validatePhone(nativeValid) {
+    if (!nativeValid) return;
+
+    let fieldName = "Phone",
+        currentValue = mktoForm.getValues()[fieldName],
+        elJq = mktoForm.getFormElem().find("#" + fieldName),
+        limits = {
+          minDigits: 7,
+          maxDigits: 20
+        },
+        messages = {
+          INVALID_CHARACTERS: 'Phone numbers may only have digits, spaces, and the characters + - . ( )',
+          INVALID_DIALABLE_LENGTH: 'Phone numbers must have between ' +
+          limits.minDigits + ' and ' +
+          limits.maxDigits + ' digits'
+        };
+
+    mktoForm.submittable(false);
+
+    if (currentValue.match(/[^0-9+\-.() ]/g)) {
+      mktoForm.showErrorMessage(messages.INVALID_CHARACTERS, elJq);
+      return false;
+    } else if (currentValue.match(/\d/g).length < limits.minDigits ||
+      currentValue.match(/\d/g).length > limits.maxDigits) {
+      mktoForm.showErrorMessage(messages.INVALID_DIALABLE_LENGTH, elJq);
+      return false;
+    }
+
+    mktoForm.submittable(true);
+  }
+
+}); 
+  
+</script>
+
+
+<!-- Marketo Script to hide form and display confirmation message --
 <script type="application/javascript">
 
 MktoForms2.whenReady(function (form) {
@@ -62,7 +107,7 @@ MktoForms2.whenReady(function (form) {
 
 });
 </script>
-
+-->
 <script>
   if (typeof MktoForms2 !== 'undefined') {
     MktoForms2.whenReady(function (form) {
