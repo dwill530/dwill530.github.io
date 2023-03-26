@@ -38,6 +38,10 @@
 <script type="application/javascript">
 
 MktoForms2.whenReady(function (form) {
+  document.querySelector('input[name="Phone"]').setAttribute("pattern", "^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$"); 
+  document.querySelector('input[name="Phone"]').setAttribute("minlength", "4");
+  document.querySelector('input[name="Phone"]').setAttribute("title", "Must be a phone number. No letters allowed");
+
 	var formEl = form.getFormElem()[0];
 	if (formEl.getAttribute("data-inline-behaviors-loaded") == "true") {
 	  return;
@@ -82,12 +86,6 @@ MktoForms2.whenReady(function (form) {
   .form-msg {display:none;}
   body {background-color: #999;}
 </style>
-
-<script>
-document.querySelector('input[name="Phone"]').setAttribute("pattern", "^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$"); 
-document.querySelector('input[name="Phone"]').setAttribute("minlength", "4");
-document.querySelector('input[name="Phone"]').setAttribute("title", "Must be a phone number. No letters allowed");
-</script>
 
 <p><a href="https://dwill530.github.io/">Home page</a></p>
 
