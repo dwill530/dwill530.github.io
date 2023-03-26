@@ -72,7 +72,7 @@ MktoForms2.whenReady(function(mktoForm) {
       return false;
     }
 
-    mktoForm.submittable(true);
+    //mktoForm.submittable(true);
   }
 
 });
@@ -94,6 +94,8 @@ MktoForms2.whenReady(function (form) {
 	  thanksText.style.display = "block";
 	  //return false to prevent the submission handler from taking the lead to the follow up url.
 	  return false;
+
+    mktoForm.submittable(true);
 	});
 
 });
