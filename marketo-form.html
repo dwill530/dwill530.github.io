@@ -36,26 +36,20 @@
 
 <!-- Marketo Script to hide form and display confirmation message -->
 <script type="application/javascript">
-MktoForms2.whenReady(function (form) {
-	var formEl = form.getFormElem()[0];
-	if (formEl.getAttribute("data-inline-behaviors-loaded") == "true") {
-	  return;
-	}
-	formEl.setAttribute("data-inline-behaviors-loaded", "true");
-	// now continue
-
-  let initialValues = form.getValues();
+MktoForms2.whenReady(function(mktoForm) {
+  
+  let initialValues = mktoForm.getValues();
   
   if("Phone" in initialValues) {
-    form.onValidate(validatePhone);
+    mktoForm.onValidate(validatePhone);
   }
 
   function validatePhone(nativeValid) {
     if (!nativeValid) return;
 
     let fieldName = "Phone",
-        currentValue = form.getValues()[fieldName],
-        elJq = form.getFormElem().find("#" + fieldName),
+        currentValue = mktoForm.getValues()[fieldName],
+        elJq = mktoForm.getFormElem().find("#" + fieldName),
         limits = {
           minDigits: 7,
           maxDigits: 10
@@ -67,10 +61,29 @@ MktoForms2.whenReady(function (form) {
           limits.maxDigits + ' digits'
         };
 
-    form.submittable(false);
+    mktoForm.submittable(false);
 
+    if (currentValue.match(/[^0-9+\-.() ]/g)) {
+      mktoForm.showErrorMessage(messages.INVALID_CHARACTERS, elJq);
+      return false;
+    } else if (currentValue.match(/\d/g).length < limits.minDigits ||
+      currentValue.match(/\d/g).length > limits.maxDigits) {
+      mktoForm.showErrorMessage(messages.INVALID_DIALABLE_LENGTH, elJq);
+      return false;
+    }
+
+    mktoForm.submittable(true);
   }
 
+});
+
+MktoForms2.whenReady(function (form) {
+	var formEl = form.getFormElem()[0];
+	if (formEl.getAttribute("data-inline-behaviors-loaded") == "true") {
+	  return;
+	}
+	formEl.setAttribute("data-inline-behaviors-loaded", "true");
+	// now continue
 	form.onSuccess(function (values, followUpUrl) {
 	  //get the form's element and hide it
 	  form.getFormElem().hide();
@@ -80,17 +93,7 @@ MktoForms2.whenReady(function (form) {
 	  var thanksText = document.getElementsByClassName("form-msg")[0];
 	  thanksText.style.display = "block";
 	  //return false to prevent the submission handler from taking the lead to the follow up url.
-	  //return false;
-    if (currentValue.match(/[^0-9+\-.() ]/g)) {
-      form.showErrorMessage(messages.INVALID_CHARACTERS, elJq);
-      return false;
-    } else if (currentValue.match(/\d/g).length < limits.minDigits ||
-      currentValue.match(/\d/g).length > limits.maxDigits) {
-      form.showErrorMessage(messages.INVALID_DIALABLE_LENGTH, elJq);
-      return false;
-    }
-
-    form.submittable(true);
+	  return false;
 	});
 
 });
