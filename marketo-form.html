@@ -65,11 +65,11 @@ MktoForms2.whenReady(function(mktoForm) {
 
     if (currentValue.match(/[^0-9+\-.() ]/g)) {
       mktoForm.showErrorMessage(messages.INVALID_CHARACTERS, elJq);
-      return false;
+      //return false;
     } else if (currentValue.match(/\d/g).length < limits.minDigits ||
       currentValue.match(/\d/g).length > limits.maxDigits) {
       mktoForm.showErrorMessage(messages.INVALID_DIALABLE_LENGTH, elJq);
-      return false;
+      //return false;
     }
 
     //mktoForm.submittable(true);
