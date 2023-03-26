@@ -43,19 +43,8 @@ MktoForms2.whenReady(function (form) {
 	}
 	formEl.setAttribute("data-inline-behaviors-loaded", "true");
 	// now continue
-	form.onSuccess(function (values, followUpUrl) {
-	  //get the form's element and hide it
-	  form.getFormElem().hide();
-	  //capture UTMs
-	  form.getFormElem()[0].classList.add("submitted");
-	  //get the form's element and show it
-	  var thanksText = document.getElementsByClassName("form-msg")[0];
-	  thanksText.style.display = "block";
-	  //return false to prevent the submission handler from taking the lead to the follow up url.
-	  return false;
-	});
 
-let initialValues = form.getValues();
+  let initialValues = form.getValues();
   
   if("Phone" in initialValues) {
     form.onValidate(validatePhone);
@@ -91,7 +80,19 @@ let initialValues = form.getValues();
 
     form.submittable(true);
   }
-  
+
+	form.onSuccess(function (values, followUpUrl) {
+	  //get the form's element and hide it
+	  form.getFormElem().hide();
+	  //capture UTMs
+	  form.getFormElem()[0].classList.add("submitted");
+	  //get the form's element and show it
+	  var thanksText = document.getElementsByClassName("form-msg")[0];
+	  thanksText.style.display = "block";
+	  //return false to prevent the submission handler from taking the lead to the follow up url.
+	  return false;
+	});
+
 });
 </script>
 
