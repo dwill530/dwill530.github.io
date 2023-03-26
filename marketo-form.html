@@ -55,18 +55,18 @@ MktoForms2.whenReady(function (form) {
 	  return false;
 	});
 
-let initialValues = mktoForm.getValues();
+let initialValues = form.getValues();
   
   if("Phone" in initialValues) {
-    mktoForm.onValidate(validatePhone);
+    form.onValidate(validatePhone);
   }
 
   function validatePhone(nativeValid) {
     if (!nativeValid) return;
 
     let fieldName = "Phone",
-        currentValue = mktoForm.getValues()[fieldName],
-        elJq = mktoForm.getFormElem().find("#" + fieldName),
+        currentValue = form.getValues()[fieldName],
+        elJq = form.getFormElem().find("#" + fieldName),
         limits = {
           minDigits: 7,
           maxDigits: 10
@@ -78,18 +78,18 @@ let initialValues = mktoForm.getValues();
           limits.maxDigits + ' digits'
         };
 
-    mktoForm.submittable(false);
+    form.submittable(false);
 
     if (currentValue.match(/[^0-9+\-.() ]/g)) {
-      mktoForm.showErrorMessage(messages.INVALID_CHARACTERS, elJq);
+      form.showErrorMessage(messages.INVALID_CHARACTERS, elJq);
       return false;
     } else if (currentValue.match(/\d/g).length < limits.minDigits ||
       currentValue.match(/\d/g).length > limits.maxDigits) {
-      mktoForm.showErrorMessage(messages.INVALID_DIALABLE_LENGTH, elJq);
+      form.showErrorMessage(messages.INVALID_DIALABLE_LENGTH, elJq);
       return false;
     }
 
-    mktoForm.submittable(true);
+    form.submittable(true);
   }
   
 });
