@@ -34,48 +34,56 @@
 <form id="mktoForm_4424"></form> 
 <script>MktoForms2.loadForm("//mktg.billtrust.com", "301-ZGZ-364", 4424);</script>
 
+<p id="values"></p>
+
 <script type="application/javascript">
- MktoForms2.whenReady(function(mktoForm) {
-  
-  let initialValues = mktoForm.getValues();
-  
-  if("Phone" in initialValues) {
-    mktoForm.onValidate(validatePhone);
+
+MktoForms2.whenReady(function (form) {
+  document.querySelector('input[name="Phone"]').setAttribute("pattern", "^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$"); 
+  document.querySelector('input[name="Phone"]').setAttribute("minlength", "4");
+  document.querySelector('input[name="Phone"]').setAttribute("title", "Must be a phone number. No letters allowed");
+
+
+var btPhone = document.querySelector('input[name="Phone"]'); 
+
+//check values  
+const input = document.querySelector('input[name="Phone"]');
+const log = document.getElementById("values");
+
+input.addEventListener("input", updateValue);
+
+function updateValue(e) {
+  log.textContent = e.target.value;
+
+  if (btPhone.value.length > 1) {
+  console.log('yes phone length is more than 2'); 
+}
+  else {
+console.log('no phone length short');
+}
+
+} 
+
+
+  var formEl = form.getFormElem()[0];
+  if (formEl.getAttribute("data-inline-behaviors-loaded") == "true") {
+    return;
   }
+  formEl.setAttribute("data-inline-behaviors-loaded", "true");
+  // now continue
+  form.onSuccess(function (values, followUpUrl) {
+    //get the form's element and hide it
+    form.getFormElem().hide();
+    //capture UTMs
+    form.getFormElem()[0].classList.add("submitted");
+    //get the form's element and show it
+    var thanksText = document.getElementsByClassName("form-msg")[0];
+    thanksText.style.display = "block";
+    //return false to prevent the submission handler from taking the lead to the follow up url.
+    return false;
+  });
 
-  function validatePhone(nativeValid) {
-    if (!nativeValid) return;
-
-    let fieldName = "Phone",
-        currentValue = mktoForm.getValues()[fieldName],
-        elJq = mktoForm.getFormElem().find("#" + fieldName),
-        limits = {
-          minDigits: 7,
-          maxDigits: 20
-        },
-        messages = {
-          INVALID_CHARACTERS: 'Phone numbers may only have digits, spaces, and the characters + - . ( )',
-          INVALID_DIALABLE_LENGTH: 'Phone numbers must have between ' +
-          limits.minDigits + ' and ' +
-          limits.maxDigits + ' digits'
-        };
-
-    mktoForm.submittable(false);
-
-    if (currentValue.match(/[^0-9+\-.() ]/g)) {
-      mktoForm.showErrorMessage(messages.INVALID_CHARACTERS, elJq);
-      return false;
-    } else if (currentValue.match(/\d/g).length < limits.minDigits ||
-      currentValue.match(/\d/g).length > limits.maxDigits) {
-      mktoForm.showErrorMessage(messages.INVALID_DIALABLE_LENGTH, elJq);
-      return false;
-    }
-
-    mktoForm.submittable(true);
-  }
-
-}); 
-  
+});
 </script>
 
 
