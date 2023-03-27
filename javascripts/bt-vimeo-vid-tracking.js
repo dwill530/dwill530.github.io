@@ -1,3 +1,4 @@
+<!--
 //MutationObserver to check if DOM has changed to trigger event and send to Marketo	
 var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
 var observer = new MutationObserver(myFunction);
@@ -206,3 +207,4 @@ params: '&videoID=' + btVimeoVideoID + '&movie-action=played-to-end'
 }
     
 });
+//-->
