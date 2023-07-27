@@ -14,6 +14,12 @@ if (btytid) {
 	console.log( "NO YouTube video on page" );
 }
 
+// Function to send data to Piwik PRO
+function sendToPiwikPRO(action, percentage) {
+    window._paq = window._paq || [];
+    window._paq.push(['trackEvent', 'Video - YouTube', action, youtubeVideoTitle, percentage]);
+}
+
 // Execute video engagement tracking - send to Marketo via API
 if( youtubeVideoId && youtubeVideoId != "false" ) {
 
@@ -35,10 +41,12 @@ if( youtubeVideoId && youtubeVideoId != "false" ) {
 		});
 	}
 
+/*
 	// Returns unique YouTube video ID
 	function getVideoId() {
 		return youtubeVideoId;
 	}
+	*/
 
 	// Returns current time code (minutes:seconds) of video
 	function getTimeCode() {
@@ -54,10 +62,12 @@ if( youtubeVideoId && youtubeVideoId != "false" ) {
 		return Math.round( 100 * ( player.getCurrentTime() / player.getDuration() ) );
 	}
 
+/*
 	// Returns YouTube Title
 	function getVideoTitle() {
 		return youtubeVideoTitle;
 	}
+	*/
 
 	// Track which playback milestones have been achieved
 	var pmAchieved = [];
@@ -75,28 +85,30 @@ if( youtubeVideoId && youtubeVideoId != "false" ) {
 				console.log( "User played video" );
 				logPlaybackMilestones();
 				Munchkin.munchkinFunction('visitWebPage', {
-					url: '/munchkinVideoTracker/?video=' + getVideoTitle(),
-					params: '&videoID=' + getVideoId() + '&movie-action=pressed-play&percent=' + getPlaybackPercentage()
+					url: '/munchkinVideoTracker/?video=' + youtubeVideoTitle,
+					params: '&videoID=' + youtubeVideoId + '&movie-action=pressed-play&percent=' + percentage
 				});
-				
+				sendToPiwikPRO('Play', percentage);
 				break;
 
 			// User paused video
 			case YT.PlayerState.PAUSED:
 			console.log( "User paused video" );
 				Munchkin.munchkinFunction('visitWebPage', {
-					url: '/munchkinVideoTracker/?video=' + getVideoTitle(),
-					params: '&videoID=' + getVideoId() + '&movie-action=paused&percent=' + getPlaybackPercentage()
+					url: '/munchkinVideoTracker/?video=' + youtubeVideoTitle,
+					params: '&videoID=' + youtubeVideoId + '&movie-action=paused&percent=' + percentage
 				});
+				sendToPiwikPRO('Pause', percentage);
 				break;
 
 			// User watched video to end
 			case YT.PlayerState.ENDED:
 			console.log( "watched video to end" );
 				Munchkin.munchkinFunction('visitWebPage', {
-					url: '/munchkinVideoTracker/?video=' + getVideoTitle(),
-					params: '&videoID=' + getVideoId() + '&movie-action=played-to-end&percent=' + getPlaybackPercentage()
+					url: '/munchkinVideoTracker/?video=' + youtubeVideoTitle,
+					params: '&videoID=' + youtubeVideoId + '&movie-action=played-to-end&percent=' + percentage
 				});
+				sendToPiwikPRO('Watched', percentage);
 				break;
 
 		}
@@ -119,9 +131,10 @@ if( youtubeVideoId && youtubeVideoId != "false" ) {
 					// ...and tell Marketo
 					console.log( "tell Marketo" );
 					Munchkin.munchkinFunction('visitWebPage', {
-						url: '/munchkinVideoTracker/?video=' + getVideoTitle(),
-						params: '&videoID=' + getVideoId() + '&movie-action=achieved-milestone&percent=' + getPlaybackPercentage()
+						url: '/munchkinVideoTracker/?video=' + youtubeVideoTitle,
+						params: '&videoID=' + youtubeVideoId + '&movie-action=achieved-milestone&percent=' + getPlaybackPercentage()
 					});
+					sendToPiwikPRO('Progress - ' + playbackMilestones[i] + '%', getPlaybackPercentage());
 				}
 			}
 			// then check again in 1 second
