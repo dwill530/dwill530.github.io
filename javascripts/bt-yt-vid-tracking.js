@@ -78,6 +78,7 @@ if( youtubeVideoId && youtubeVideoId != "false" ) {
 
 	// When user interacts with video, tell Marketo (via Munchkin API)
 	function onPlayerStateChange( event ) {
+		var percentage = getPlaybackPercentage();
 		switch( event.data ) {
 
 			// User played video
