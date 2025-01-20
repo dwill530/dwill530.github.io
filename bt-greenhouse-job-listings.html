@@ -21,1435 +21,1443 @@
 <main>
 <!-- Billtrust Greenhouse Job Listings -->
 <section id="full-width-row-5e0e0d25cc1f4de18c75d47702282700" class="full-width-row component" aria-labelledby="full-width-row-heading-5e0e0d25cc1f4de18c75d47702282700" data-section="Job Openings">
-    <div class="full-width-row__container">
-
-            <div class="full-width-row__copy rtf">
-                <script type="text/javascript">
-
-var translationStrings = {
-    "en": {
-        "Keyword Search" : "Keyword Search",
-        "Keyword" : "Keyword",
-        "Select Job Type" : "Select Job Type",
-        "Select a Location" : "Select a Location",
-        "Select a Team" : "Select a Team",
-        "result" : "result",
-        "results" : "results",
-        "No Results Found" : "No Results Found",
-        "No listings matched your criteria. Try searching for something else." : "No listings matched your criteria. Try searching for something else.",
-        "Apply Now" : "Apply Now",
-        "Don't see what you're looking for?" : "Don't see what you're looking for?",
-        "Get added to our talent pool for updates on future opportunities!" : "Get added to our talent pool for updates on future opportunities!",
-    },
-    "fr": {
-        "Keyword Search" : "Recherche par mot-clé",
-        "Keyword" : "Mot-clé",
-        "Select Job Type" : "Sélectionnez le type d'emploi",
-        "Select a Location" : "Sélectionnez un site",
-        "Select a Team" : "Sélectionnez une équipe",
-        "result" : "résultat",
-        "results" : "résultats",
-        "No Results Found" : "Aucun résultat trouvé",
-        "No listings matched your criteria. Try searching for something else." : "Aucune offre ne correspond à vos critères. Effectuez une autre recherche.",
-        "Apply Now" : "Postuler maintenant",
-        "Don't see what you're looking for?" : "Vous ne trouvez pas ce que vous cherchez?",
-        "Get added to our talent pool for updates on future opportunities!" : "Rejoignez notre vivier de talents pour être au courant des opportunités à venir!",
-    },
-    "de": {
-        "Keyword Search" : "Stichwortsuche",
-        "Keyword" : "Stichwort",
-        "Select Job Type" : "Art der Stelle auswählen",
-        "Select a Location" : "Standort auswählen",
-        "Select a Team" : "Ein Team auswählen",
-        "result" : "ergebnis",
-        "results" : "ergebnisse",
-        "No Results Found" : "Keine Ergebnisse gefunden",
-        "No listings matched your criteria. Try searching for something else." : "Es wurden keine Angebote gefunden, die Ihren Kriterien entsprechen. Bitte versuchen Sie, nach etwas anderem zu suchen.",
-        "Apply Now" : "Jetzt bewerben",
-        "Don't see what you're looking for?" : "Sie sehen nicht, wonach Sie suchen?",
-        "Get added to our talent pool for updates on future opportunities!" : "Lassen Sie sich in unseren Talentpool aufnehmen, um über künftige Stellenangebote informiert zu werden!",
-    },
-    "nl": {
-        "Keyword Search" : "Zoeken op trefwoord",
-        "Keyword" : "Trefwoord",
-        "Select Job Type" : "Selecteer type vacature",
-        "Select a Location" : "Selecteer een locatie",
-        "Select a Team" : "Selecteer een team",
-        "result" : "resultaat",
-        "results" : "resultaten",
-        "No Results Found" : "Geen resultaten gevonden",
-        "No listings matched your criteria. Try searching for something else." : "Er komen geen vermeldingen overeen met jouw criteria. Probeer iets anders te zoeken.",
-        "Apply Now" : "Solliciteer nu",
-        "Don't see what you're looking for?" : "Zie je niet wat je zoekt?",
-        "Get added to our talent pool for updates on future opportunities!" : "Kom bij onze talentpool voor updates over toekomstige kansen!",
-    }
-};
-
-var currentLang = 'en';
-if( window.location.pathname.match(/^\/([a-zA-Z]{2})-[a-zA-Z]{2}\//) == null ){
-    currentLang = 'en';
-}
-else if( typeof window.location.pathname.match(/^\/([a-zA-Z]{2})-[a-zA-Z]{2}\//)[1] == "string" ){
-    if( window.location.pathname.match(/^\/([a-zA-Z]{2})-[a-zA-Z]{2}\//)[1] in translationStrings ){
-        currentLang = window.location.pathname.match(/^\/([a-zA-Z]{2})-[a-zA-Z]{2}\//)[1];
-    }
-}
-
-function _e( string ){
-  return typeof translationStrings[currentLang][string] == "undefined" ? string : translationStrings[currentLang][string];
-}
-var language_prefix = ( currentLang == "en" ) ? "" : "/" + currentLang + "-" + currentLang;
-
-var banner_url = language_prefix + atob("L2NhcmVlcnMvam9iLW9wZW5pbmdzL2NhcmVlcnMtam9iLWRldGFpbHMtYXBwbGljYXRpb24jZ2hfamlkPTU0NzM4NzYwMDMmc291cmNlPWJpbGx0cnVzdDM=");
-var style = document.createElement('style');
-  style.innerHTML = `
-    .btJobsSearch {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 1em;
-    }
-
-    .jobs-count {
-        display: inline-block;
-        width: 100%;
-        margin: 1em 0 .5em 0;
-        text-transform: uppercase;
-        font-size: 13px;
-        color: #354F51;
-        font-family: "indivisible", "Indivisible", sans-serif;
-    }
-
-    .column {
-        flex: 1;
-    }
-
-    .filter-sidebar {
-        flex: 1;
-        margin: 0 2em 0 0;
-        max-width: 32%;
-    }
-
-    .filters {
-        background: #EDEEEE;
-        padding: 2em;
-    }
-
-    .filter-row {
-        padding: 1em 1em 0 1em;
-        position: relative;
-    }
-
-    .keyword-search {
-        background: none;
-        border: none;
-        width: 100%;
-        font-size: 18px;
-        padding: 5px 25px 5px 16px;
-        position: relative;
-    }
-
-    .keyword-search {
-        border-bottom: 2px solid #032325;
-    }
-
-    .keyword-search:active,
-    .keyword-search.focus-visible {
-        outline: none;
-        border-bottom: 2px solid #8F33FF;
-    }
-
-    .job-search::after {
-        content: "";
-        background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.6316 12.606L10.0176 9.99192M11.4298 6.5966C11.4298 9.25172 9.27736 11.4041 6.62223 11.4041C3.9671 11.4041 1.8147 9.25172 1.8147 6.5966C1.8147 3.94147 3.9671 1.78906 6.62223 1.78906C9.27736 1.78906 11.4298 3.94147 11.4298 6.5966Z' stroke='%23028758' stroke-width='1.80283' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-        background-repeat: no-repeat;
-        background-position: center;
-        width: 27px;
-        height: 27px;
-        position: absolute;
-        top: 18px;
-        right: 16px;
-        cursor: pointer;
-    }
-
-    .filter-label {
-        color: #032325;
-        font-size: 18px;
-        font-family: "indivisible", "Indivisible", sans-serif;
-        font-weight: 500;
-        padding-bottom: 1em;
-        width: 100%;
-        position: relative;
-        cursor: pointer;
-text-align: left;
-padding-left: 0;
-    }
-
-    .filter-label.closed {}
-
-    .filter-label::after {
-        border-style: solid;
-        border-width: 0.1em 0.1em 0 0;
-        content: '';
-        display: inline-block;
-        height: 0.45em;
-        right: 10px;
-        position: absolute;
-        top: 12px;
-        transform: rotate(-45deg);
-        vertical-align: top;
-        width: 0.45em;
-    }
-
-    .filter-label:hover::after {
-        color: #028758;
-    }
-
-    .filter-label:focus::before,
-    .filter-label:active::before,
-    .filter-label:hover::before {
-        content: "";
-        position: absolute;
-        display: block;
-        right: 0px;
-        border: 1px solid #028758;
-        width: 1.5em;
-        height: 1.5em;
-        margin-top: 0px;
-    }
-
-    .filter-label.closed::after {
-        transform: rotate(135deg);
-        top: 7px;
-    }
-
-    .filter-label+div {
-        /* max-height: 100vh; */
-        transition: max-height 0.4s ease-out;
-        overflow-y: hidden;
-    }
-
-    .filter-label.closed+div {
-        max-height: 0;
-    }
-
-    .filter-label+div>div:nth-child(1) {
-        margin-top: .2em;
-    }
-
-    .location-option,
-    .department-option,
-    .job-type-option {
-        color: #032325;
-        font-family: 'indivisible', "Indvisible", sans-serif;
-    }
-
-    .location-option-wrapper,
-    .department-option-wrapper,
-    .job-type-option-wrapper {
-        margin-bottom: 1.5em;
-    }
-
-    .filter-row {
-        border-bottom: 1px solid #d2d6d8;
-    }
-
-    .filter-row:nth-child(1) {
-        border: none;
-        padding: 1em 0 0.5em 0;
-    }
-
-    .filter-row label {
-        display: block;
-        position: relative;
-        cursor: pointer;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        padding-left: 35px;
-        line-height: 1.25em;
-        font-family: "indivisible", "Indivisible", sans-serif;
-        font-size: 16px;
-    }
-
-    .bt-checkbox {
-        position: absolute;
-        opacity: 0;
-        cursor: pointer;
-        height: 0;
-        width: 0;
-    }
-
-    .filters .checkmark {
-        position: absolute;
-        top: -2px;
-        left: 1px;
-        height: 22px;
-        width: 22px;
-        border: 1px solid #4D6069;
-    }
-
-    .filters input:checked~.checkmark::after {
-        content: "";
-        position: absolute;
-        left: 3px;
-        top: 3px;
-        width: 14px;
-        height: 14px;
-        background-color: #028758;
-    }
-    .filters input:checked:focus~.checkmark::after {
-        left: 2px;
-        top: 2px;
-    }
-
-    .filters input:focus~.checkmark {
-        border: 2px solid #028758;
-    }
-
-    .filter-tags {
-        margin-bottom: 1em;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-    }
-
-    .filter-tag {
-        border: 2px solid #028758;
-        display: inline;
-        line-height: 1em;
-        border-radius: 30px;
-        padding: 12px 36px 12px 15px;
-        margin-right: 0.75em;
-        margin-bottom: 0.75em;
-        cursor: pointer;
-        position: relative;
-        font-size: 14px;
-        font-family: "indivisible", "Indivisible", sans-serif;
-    }
-
-    .filter-tag::after {
-        content: "+";
-        line-height: 1em;
-        padding-left: 10px;
-        font-size: 1.7rem;
-        transform: rotate(45deg);
-        position: absolute;
-        right: 8px;
-        top: 2px;
-    }
-
-    .filter-tag:hover {
-        color: #fff;
-        background-color: #8F33FF;
-        border-color: #8F33FF;
-    }
-
-    .bt-loading span {
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' style='margin:auto;display:block;' width='104px' height='104px' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid'%3E%3Ccircle cx='50' cy='50' fill='none' stroke='%2311865d' stroke-width='10' r='35' stroke-dasharray='164.93361431346415 56.97787143782138'%3E%3CanimateTransform attributeName='transform' type='rotate' repeatCount='indefinite' dur='1.639344262295082s' values='0 50 50;360 50 50' keyTimes='0;1'%3E%3C/animateTransform%3E%3C/circle%3E%3C/svg%3E");
-        width: 104px;
-        height: 104px;
-        margin: 0 auto;
-        display: block;
-    }
-
-    .job-entry {
-        border-top: 1px solid #EDEEEE;
-        display: flex;
-        justify-content: space-between;
-        padding: 2em 0;
-        position: relative;
-    }
-
-    .job-entry .actions {
-        padding-right: 2em;
-        display: flex;
-        align-items: flex-start;
-    }
-
-    .job-entry .job-title a {
-        font-family: "degular-display", "Degular", sans-serif;
-        font-size: 24px;
-        font-weight: 600;
-        color: #032325;
-        text-decoration: none;
-        letter-spacing: 0.75px;
-    }
-
-    .job-entry .job-title a:hover {
-        text-decoration: underline;
-    }
-
-    .job-title:hover svg.arrow-icon {
-        margin-left: 5px;
-        transition: margin-left .2s ease-out;
-    }
-
-    .job-entry .job-department {
-        font-size: 16px;
-        font-weight: 400;
-        color: #032325;
-        font-family: "indivisible", "Indivisible", sans-serif;
-    }
-
-    .job-entry .job-location {
-        font-size: 14px;
-        font-weight: 400;
-        text-transform: uppercase;
-        font-family: "indivisible", "Indivisible", sans-serif;
-        color: #4D6069;
-    }
-
-    .apply-button {
-        font-family: "indivisible", "Indivisible", sans-serif;
-        font-weight: 500;
-        border: 2px solid #028758;
-        border-radius: 30px;
-        padding: 8px 20px;
-        text-decoration: none;
-        text-transform: capitalize;
-        color: #032325;
-        white-space: nowrap;
-    }
-
-    .job-entry .apply-button:hover {
-        color: #fff;
-        background-color: #8F33FF;
-        border-color: #8F33FF;
-    }
-
-    .no-results {
-        border-top: 2px solid #EDEEEE;
-        margin-top: 2.5em;
-        padding-top: 1em;
-    }
-
-    .no-results h3 {
-        font-family: "degular-display", "Degular";
-        font-size: 22px;
-        font-weight: 600;
-    }
-
-    .no-results p {
-        font-family: "indivisible", "Indivisible", sans-serif;
-    }
-
-    .pagination {
-        display: flex;
-        visibility: hidden;
-        justify-content: center;
-        margin-bottom: 2em;
-        user-select: none;
-    }
-
-    .page-prev,
-    .page-next {
-        cursor: pointer;
-    }
-
-    ul.pages {
-        display: flex;
-        margin: 0 1em;
-        padding: 0;
-    }
-
-    ul.pages li {
-        list-style: none;
-        display: inline-block;
-        margin: 0.5em;
-    }
-    ul.pages li:before{
-        display: none !important;
-    }
-
-    .pages li a {
-        color: #00373B;
-        text-decoration: none;
-        font-family: 'Indivisible';
-        font-style: normal;
-        font-weight: 500;
-        padding: .1em;
-        font-size: 20px;
-        line-height: 1em;
-
-    }
-
-    .pages li a:hover {
-        text-decoration: underline;
-    }
-
-    .pages li a.active {
-        color: #028758;
-        text-decoration: underline;
-    }
-
-    .apply-anyway {
-        background-color: #00373B;
-        background-image: url("/-/media/images/content/careers-apply-anyway-banner-background.jpg");
-        background-repeat: no-repeat;
-        background-size: contain;
-        margin: 0 auto 0 auto;
-        color: #fff;
-        padding: 2em 0em 2em 2em;
-        display: flex;
-        flex-direction: row-reverse;
-    }
-
-    .apply-anyway a {
-        display: block;
-        text-decoration: none;
-    }
-
-    .super-head {
-        color: #fff;
-        font-family: "Indivisible", 'indivisible', sans-serif;
-        font-style: normal;
-        font-weight: 200;
-        text-transform: uppercase;
-        font-size: 14px;
-    }
-
-    .headline {
-        color: #fff;
-        max-width: 400px;
-        font-family: "degular-display", "Degular", sans-serif;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 24px;
-        line-height: 115%;
-        padding-right: 2em;
-    }
-
-    .headline svg {
-        display: inline-block;
-        margin-bottom: -2px;
-    }
-
-    .apply-anyway a:hover .headline svg {
-        margin-left: 6px;
-    }
-
-
-    .rtf ul li:before {
-        display: none;
-    }
-
-    .sub-department .filter-option-label {
-      padding-left: 70px;
-    }
-    .sub-department .filter-option-label .checkmark {
-      left: 36px;
-    }
-
-    @media(max-width:1023px) {
-        .btJobsSearch {
-            flex-direction: column;
-        }
-
-        .filter-sidebar {
-            max-width: 100%;
-            margin-right: 0;
-        }
-    }
-
-    @media (min-width:719px) {
-        .apply-anyway .headline {
-            padding-left: 0;
-        }
-    }
-
-    @media (max-width:720px) {
-        .apply-anyway {
-            background-image: none;
-            justify-content: center;
-        }
-    }
-
-    @media (max-width:500px) {
-        .job-entry {
-            flex-direction: column;
-        }
-
-        .job-entry .info {
-            margin-bottom: 1em;
-        }
-    }
-
-    @media (min-width:720px) and (max-width:1279px) {
-        .apply-anyway .headline {
-            padding-left: 1em;
-            padding-right: 1em;
-        }
-
-        .apply-anyway .super-head {
-            padding-left: 1.7em;
-        }
-
-        .filters {
-            padding: 1em;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .btJobsSearch {
-            margin: 0;
-        }
-
-        .filters {
-            padding: 0em;
-        }
-    }
-  `;
-  document.head.appendChild(style);
-</script>
-<div class="btJobsSearch lang-en">
-    <div class="filter-sidebar">
-        <div class="filters">
-            <div class="filter-row">
-                <div class="job-search">
-                    <input class="keyword-search" placeholder="Keyword Search" type="text">
-                </div>
-            </div>
-            <div class="filter-row">
-                <button class="filter-label closed filter-job-type">Select Job Type</button>
-                <div class="job-type-options"><div class="job-type-option-wrapper"><label class="filter-option-label"><input class="job-type-option filter-trigger bt-checkbox" type="checkbox" name="" value="" disabled="" data-name-lowercase=""><span class="checkmark"></span> (1)</label></div><div class="job-type-option-wrapper"><label class="filter-option-label"><input class="job-type-option filter-trigger bt-checkbox" type="checkbox" name="Full Time" value="Full Time" disabled="" data-name-lowercase="full time"><span class="checkmark"></span>Full Time (21)</label></div></div>
-            </div>
-            <div class="filter-row">
-                <button class="filter-label closed filter-location">Select a Location</button>
-                <div class="location-options"><div class="location-option-wrapper"><label class="filter-option-label"><input class="location-option filter-trigger bt-checkbox" type="checkbox" name="Belgium" value="Belgium" disabled="" data-name-lowercase="belgium"><span class="checkmark"></span>Belgium (1)</label></div><div class="location-option-wrapper"><label class="filter-option-label"><input class="location-option filter-trigger bt-checkbox" type="checkbox" name="Gent" value="Gent" disabled="" data-name-lowercase="gent"><span class="checkmark"></span>Gent (1)</label></div><div class="location-option-wrapper"><label class="filter-option-label"><input class="location-option filter-trigger bt-checkbox" type="checkbox" name="Krakow" value="Krakow" disabled="" data-name-lowercase="krakow"><span class="checkmark"></span>Krakow (5)</label></div><div class="location-option-wrapper"><label class="filter-option-label"><input class="location-option filter-trigger bt-checkbox" type="checkbox" name="Krakow, Poland" value="Krakow, Poland" disabled="" data-name-lowercase="krakow, poland"><span class="checkmark"></span>Krakow, Poland (1)</label></div><div class="location-option-wrapper"><label class="filter-option-label"><input class="location-option filter-trigger bt-checkbox" type="checkbox" name="Kraków, Poland" value="Kraków, Poland" disabled="" data-name-lowercase="kraków, poland"><span class="checkmark"></span>Kraków, Poland (3)</label></div><div class="location-option-wrapper"><label class="filter-option-label"><input class="location-option filter-trigger bt-checkbox" type="checkbox" name="Poland" value="Poland" disabled="" data-name-lowercase="poland"><span class="checkmark"></span>Poland (8)</label></div><div class="location-option-wrapper"><label class="filter-option-label"><input class="location-option filter-trigger bt-checkbox" type="checkbox" name="United States (Remote)" value="United States (Remote)" disabled="" data-name-lowercase="united states (remote)"><span class="checkmark"></span>United States (Remote) (13)</label></div></div>
-            </div>
-            <div class="filter-row">
-                <button class="filter-label closed filter-department">Select a Team</button>
-                <div class="department-options"><div class="department-option-wrapper"><label class="filter-option-label"><input class="department-option filter-trigger bt-checkbox" type="checkbox" name="Customer Support" value="Customer Support" disabled="" data-name-lowercase="customer support"><span class="checkmark"></span>Customer Support (3)</label></div><div class="department-option-wrapper"><label class="filter-option-label"><input class="department-option filter-trigger bt-checkbox" type="checkbox" name="Finance &amp; Accounting" value="Finance &amp; Accounting" disabled="" data-name-lowercase="finance &amp; accounting"><span class="checkmark"></span>Finance &amp; Accounting (1)</label></div><div class="department-option-wrapper"><label class="filter-option-label"><input class="department-option filter-trigger bt-checkbox" type="checkbox" name="Product" value="Product" disabled="" data-name-lowercase="product"><span class="checkmark"></span>Product (1)</label></div><div class="department-option-wrapper"><label class="filter-option-label"><input class="department-option filter-trigger bt-checkbox" type="checkbox" name="Product Marketing" value="Product Marketing" disabled="" data-name-lowercase="product marketing"><span class="checkmark"></span>Product Marketing (2)</label></div><div class="department-option-wrapper"><label class="filter-option-label"><input class="department-option filter-trigger bt-checkbox" type="checkbox" name="Professional Services" value="Professional Services" disabled="" data-name-lowercase="professional services"><span class="checkmark"></span>Professional Services (3)</label></div><div class="department-option-wrapper"><label class="filter-option-label"><input class="department-option filter-trigger bt-checkbox" type="checkbox" name="Revenue Operations" value="Revenue Operations" disabled="" data-name-lowercase="revenue operations"><span class="checkmark"></span>Revenue Operations (4)</label></div><div class="department-option-wrapper sub-department"><label class="filter-option-label"><input class="department-option filter-trigger bt-checkbox" type="checkbox" name="Sales Enablement" value="Sales Enablement" disabled="" data-name-lowercase="sales enablement"><span class="checkmark"></span>Sales Enablement (1)</label></div><div class="department-option-wrapper"><label class="filter-option-label"><input class="department-option filter-trigger bt-checkbox" type="checkbox" name="Sales" value="Sales" disabled="" data-name-lowercase="sales"><span class="checkmark"></span>Sales (3)</label></div><div class="department-option-wrapper sub-department"><label class="filter-option-label"><input class="department-option filter-trigger bt-checkbox" type="checkbox" name="Corporate Sales" value="Corporate Sales" disabled="" data-name-lowercase="corporate sales"><span class="checkmark"></span>Corporate Sales (1)</label></div><div class="department-option-wrapper sub-department"><label class="filter-option-label"><input class="department-option filter-trigger bt-checkbox" type="checkbox" name="Enterprise Sales" value="Enterprise Sales" disabled="" data-name-lowercase="enterprise sales"><span class="checkmark"></span>Enterprise Sales (1)</label></div><div class="department-option-wrapper sub-department"><label class="filter-option-label"><input class="department-option filter-trigger bt-checkbox" type="checkbox" name="Vertical Sales" value="Vertical Sales" disabled="" data-name-lowercase="vertical sales"><span class="checkmark"></span>Vertical Sales (2)</label></div></div>
-            </div>
-        </div>
-    </div>
-    <div class="column">
-        <div class="jobs-count">22 results</div>
-        <div class="filter-tags"></div>
-        <div class="bt-loading" style="display: none;"><span></span></div>
-        <div class="jobs-listing"><div class="job-entry" style="display: flex;"><div class="info"><div class="job-title"><a href="/careers/job-openings/careers-job-details-application?gh_jid=6250185003&amp;source=billtrust">Customer Sales Representative<svg class="arrow-icon" width="16" height="16" fill="none" viewBox="0 0 21 17"><path d="M7.69675 1.94331L14.1079 8.35447L7.69675 14.7656" stroke="#032325" stroke-width="2.40418" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></div><div class="job-department"><strong>Sales</strong><span class="job-type"> - Full Time</span></div><div class="job-location">United States (Remote)</div></div></div><div class="job-entry" style="display: flex;"><div class="info"><div class="job-title"><a href="/careers/job-openings/careers-job-details-application?gh_jid=6217374003&amp;source=billtrust">Manager, Data Governance<svg class="arrow-icon" width="16" height="16" fill="none" viewBox="0 0 21 17"><path d="M7.69675 1.94331L14.1079 8.35447L7.69675 14.7656" stroke="#032325" stroke-width="2.40418" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></div><div class="job-department"><strong>Revenue Operations</strong><span class="job-type"> - Full Time</span></div><div class="job-location">United States (Remote)</div></div></div><div class="job-entry" style="display: flex;"><div class="info"><div class="job-title"><a href="/careers/job-openings/careers-job-details-application?gh_jid=6270870003&amp;source=billtrust">Manager, Financial Planning &amp; Analysis<svg class="arrow-icon" width="16" height="16" fill="none" viewBox="0 0 21 17"><path d="M7.69675 1.94331L14.1079 8.35447L7.69675 14.7656" stroke="#032325" stroke-width="2.40418" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></div><div class="job-department"><strong>Finance &amp; Accounting</strong><span class="job-type"> - Full Time</span></div><div class="job-location">United States (Remote)</div></div></div><div class="job-entry" style="display: flex;"><div class="info"><div class="job-title"><a href="/careers/job-openings/careers-job-details-application?gh_jid=6273589003&amp;source=billtrust">Manager, Sales (Ecommerce)<svg class="arrow-icon" width="16" height="16" fill="none" viewBox="0 0 21 17"><path d="M7.69675 1.94331L14.1079 8.35447L7.69675 14.7656" stroke="#032325" stroke-width="2.40418" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></div><div class="job-department"><strong>Sales</strong><span class="job-type"> - Full Time</span></div><div class="job-location">United States (Remote)</div></div></div><div class="job-entry" style="display: flex;"><div class="info"><div class="job-title"><a href="/careers/job-openings/careers-job-details-application?gh_jid=6312243003&amp;source=billtrust">Product Operations Specialist - Payments<svg class="arrow-icon" width="16" height="16" fill="none" viewBox="0 0 21 17"><path d="M7.69675 1.94331L14.1079 8.35447L7.69675 14.7656" stroke="#032325" stroke-width="2.40418" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></div><div class="job-department"><strong>Product</strong><span class="job-type"> - Full Time</span></div><div class="job-location">United States (Remote)</div></div></div><div class="job-entry" style="display: flex;"><div class="info"><div class="job-title"><a href="/careers/job-openings/careers-job-details-application?gh_jid=6304641003&amp;source=billtrust">Sales Executive (Corporate)<svg class="arrow-icon" width="16" height="16" fill="none" viewBox="0 0 21 17"><path d="M7.69675 1.94331L14.1079 8.35447L7.69675 14.7656" stroke="#032325" stroke-width="2.40418" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></div><div class="job-department"><strong>Corporate Sales</strong><span class="job-type"> - Full Time</span></div><div class="job-location">United States (Remote)</div></div></div><div class="job-entry" style="display: flex;"><div class="info"><div class="job-title"><a href="/careers/job-openings/careers-job-details-application?gh_jid=6304643003&amp;source=billtrust">Sales Executive (Heavy Equipment)<svg class="arrow-icon" width="16" height="16" fill="none" viewBox="0 0 21 17"><path d="M7.69675 1.94331L14.1079 8.35447L7.69675 14.7656" stroke="#032325" stroke-width="2.40418" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></div><div class="job-department"><strong>Vertical Sales</strong><span class="job-type"> - Full Time</span></div><div class="job-location">United States (Remote)</div></div></div><div class="job-entry" style="display: flex;"><div class="info"><div class="job-title"><a href="/careers/job-openings/careers-job-details-application?gh_jid=6062776003&amp;source=billtrust">Senior Analyst Relations Manager<svg class="arrow-icon" width="16" height="16" fill="none" viewBox="0 0 21 17"><path d="M7.69675 1.94331L14.1079 8.35447L7.69675 14.7656" stroke="#032325" stroke-width="2.40418" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></div><div class="job-department"><strong>Product Marketing</strong><span class="job-type"> - Full Time</span></div><div class="job-location">United States (Remote)</div></div></div><div class="job-entry" style="display: flex;"><div class="info"><div class="job-title"><a href="/careers/job-openings/careers-job-details-application?gh_jid=6310403003&amp;source=billtrust">Senior Customer Support Specialist<svg class="arrow-icon" width="16" height="16" fill="none" viewBox="0 0 21 17"><path d="M7.69675 1.94331L14.1079 8.35447L7.69675 14.7656" stroke="#032325" stroke-width="2.40418" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></div><div class="job-department"><strong>Customer Support</strong><span class="job-type"> - Full Time</span></div><div class="job-location">United States (Remote)</div></div></div><div class="job-entry" style="display: flex;"><div class="info"><div class="job-title"><a href="/careers/job-openings/careers-job-details-application?gh_jid=6101696003&amp;source=billtrust">Senior Director, Revenue Operations<svg class="arrow-icon" width="16" height="16" fill="none" viewBox="0 0 21 17"><path d="M7.69675 1.94331L14.1079 8.35447L7.69675 14.7656" stroke="#032325" stroke-width="2.40418" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></div><div class="job-department"><strong>Revenue Operations</strong><span class="job-type"> - Full Time</span></div><div class="job-location">United States (Remote)</div></div></div><div class="job-entry" style="display: none;"><div class="info"><div class="job-title"><a href="/careers/job-openings/careers-job-details-application?gh_jid=6317843003&amp;source=billtrust">Senior Sales Executive (Business Services)<svg class="arrow-icon" width="16" height="16" fill="none" viewBox="0 0 21 17"><path d="M7.69675 1.94331L14.1079 8.35447L7.69675 14.7656" stroke="#032325" stroke-width="2.40418" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></div><div class="job-department"><strong>Vertical Sales</strong><span class="job-type"> - Full Time</span></div><div class="job-location">United States (Remote)</div></div></div><div class="job-entry" style="display: none;"><div class="info"><div class="job-title"><a href="/careers/job-openings/careers-job-details-application?gh_jid=6304650003&amp;source=billtrust">Senior Sales Executive (Enterprise)<svg class="arrow-icon" width="16" height="16" fill="none" viewBox="0 0 21 17"><path d="M7.69675 1.94331L14.1079 8.35447L7.69675 14.7656" stroke="#032325" stroke-width="2.40418" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></div><div class="job-department"><strong>Enterprise Sales</strong><span class="job-type"> - </span></div><div class="job-location">United States (Remote)</div></div></div><div class="job-entry" style="display: none;"><div class="info"><div class="job-title"><a href="/careers/job-openings/careers-job-details-application?gh_jid=6289471003&amp;source=billtrust">Sr Sales Trainer<svg class="arrow-icon" width="16" height="16" fill="none" viewBox="0 0 21 17"><path d="M7.69675 1.94331L14.1079 8.35447L7.69675 14.7656" stroke="#032325" stroke-width="2.40418" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></div><div class="job-department"><strong>Sales</strong><span class="job-type"> - Full Time</span></div><div class="job-location">United States (Remote)</div></div></div><div class="job-entry" style="display: none;"><div class="info"><div class="job-title"><a href="/careers/job-openings/careers-job-details-application?gh_jid=6257343003&amp;source=billtrust2">Business Analyst (Poland)<svg class="arrow-icon" width="16" height="16" fill="none" viewBox="0 0 21 17"><path d="M7.69675 1.94331L14.1079 8.35447L7.69675 14.7656" stroke="#032325" stroke-width="2.40418" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></div><div class="job-department"><strong>Professional Services</strong><span class="job-type"> - Full Time</span></div><div class="job-location">Krakow; Poland </div></div></div><div class="job-entry" style="display: none;"><div class="info"><div class="job-title"><a href="/careers/job-openings/careers-job-details-application?gh_jid=6271989003&amp;source=billtrust2">Customer Support Specialist<svg class="arrow-icon" width="16" height="16" fill="none" viewBox="0 0 21 17"><path d="M7.69675 1.94331L14.1079 8.35447L7.69675 14.7656" stroke="#032325" stroke-width="2.40418" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></div><div class="job-department"><strong>Customer Support</strong><span class="job-type"> - Full Time</span></div><div class="job-location">Krakow; Poland </div></div></div><div class="job-entry" style="display: none;"><div class="info"><div class="job-title"><a href="/careers/job-openings/careers-job-details-application?gh_jid=6230699003&amp;source=billtrust2">Data Analyst<svg class="arrow-icon" width="16" height="16" fill="none" viewBox="0 0 21 17"><path d="M7.69675 1.94331L14.1079 8.35447L7.69675 14.7656" stroke="#032325" stroke-width="2.40418" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></div><div class="job-department"><strong>Revenue Operations</strong><span class="job-type"> - Full Time</span></div><div class="job-location">Kraków, Poland</div></div></div><div class="job-entry" style="display: none;"><div class="info"><div class="job-title"><a href="/careers/job-openings/careers-job-details-application?gh_jid=6230704003&amp;source=billtrust2">Data Steward<svg class="arrow-icon" width="16" height="16" fill="none" viewBox="0 0 21 17"><path d="M7.69675 1.94331L14.1079 8.35447L7.69675 14.7656" stroke="#032325" stroke-width="2.40418" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></div><div class="job-department"><strong>Revenue Operations</strong><span class="job-type"> - Full Time</span></div><div class="job-location">Kraków, Poland</div></div></div><div class="job-entry" style="display: none;"><div class="info"><div class="job-title"><a href="/careers/job-openings/careers-job-details-application?gh_jid=6224516003&amp;source=billtrust2">Product Marketing Manager<svg class="arrow-icon" width="16" height="16" fill="none" viewBox="0 0 21 17"><path d="M7.69675 1.94331L14.1079 8.35447L7.69675 14.7656" stroke="#032325" stroke-width="2.40418" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></div><div class="job-department"><strong>Product Marketing</strong><span class="job-type"> - Full Time</span></div><div class="job-location">Kraków, Poland</div></div></div><div class="job-entry" style="display: none;"><div class="info"><div class="job-title"><a href="/careers/job-openings/careers-job-details-application?gh_jid=6249080003&amp;source=billtrust2">Project Manager<svg class="arrow-icon" width="16" height="16" fill="none" viewBox="0 0 21 17"><path d="M7.69675 1.94331L14.1079 8.35447L7.69675 14.7656" stroke="#032325" stroke-width="2.40418" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></div><div class="job-department"><strong>Professional Services</strong><span class="job-type"> - Full Time</span></div><div class="job-location">Krakow; Poland </div></div></div><div class="job-entry" style="display: none;"><div class="info"><div class="job-title"><a href="/careers/job-openings/careers-job-details-application?gh_jid=6299405003&amp;source=billtrust2">Sales Enablement Specialist<svg class="arrow-icon" width="16" height="16" fill="none" viewBox="0 0 21 17"><path d="M7.69675 1.94331L14.1079 8.35447L7.69675 14.7656" stroke="#032325" stroke-width="2.40418" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></div><div class="job-department"><strong>Sales Enablement</strong><span class="job-type"> - Full Time</span></div><div class="job-location">Krakow, Poland</div></div></div><div class="job-entry" style="display: none;"><div class="info"><div class="job-title"><a href="/careers/job-openings/careers-job-details-application?gh_jid=6248927003&amp;source=billtrust2">Senior Business Analyst<svg class="arrow-icon" width="16" height="16" fill="none" viewBox="0 0 21 17"><path d="M7.69675 1.94331L14.1079 8.35447L7.69675 14.7656" stroke="#032325" stroke-width="2.40418" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></div><div class="job-department"><strong>Professional Services</strong><span class="job-type"> - Full Time</span></div><div class="job-location">Gent; Belgium</div></div></div><div class="job-entry" style="display: none;"><div class="info"><div class="job-title"><a href="/careers/job-openings/careers-job-details-application?gh_jid=6263656003&amp;source=billtrust2">Technical Customer Support Specialist<svg class="arrow-icon" width="16" height="16" fill="none" viewBox="0 0 21 17"><path d="M7.69675 1.94331L14.1079 8.35447L7.69675 14.7656" stroke="#032325" stroke-width="2.40418" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></div><div class="job-department"><strong>Customer Support</strong><span class="job-type"> - Full Time</span></div><div class="job-location">Krakow; Poland </div></div></div></div>
-        <div class="pagination" style="visibility: initial;">
-          <a class="page-prev" style="display: none;"><svg width="30" height="20" viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.49756 9.65039H27.6603" stroke="#00373B" stroke-width="1.83515" stroke-linecap="round"></path><path d="M8.69753 17.9085L1.35693 9.95622L8.69753 2.00391" stroke="#00373B" stroke-width="1.83515" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
-          <ul class="pages"><li><a href="#" data-page="1" class="active">1</a></li><li><a href="#" data-page="2">2</a></li><li><a href="#" data-page="3">3</a></li></ul>
-          <a class="page-next" style="display: block;"><svg width="30" height="20" viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25.5054 9.65039H1.34259" stroke="#00373B" stroke-width="1.83515" stroke-linecap="round"></path><path d="M20.3059 17.9085L27.6465 9.95622L20.3059 2.00391" stroke="#00373B" stroke-width="1.83515" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
-        </div>
-        <div class="apply-anyway">
-            <a class="apply-anyway-anchor" href="/careers/job-openings/careers-job-details-application#gh_jid=5473876003&amp;source=billtrust3">
-                <div class="super-head">Don't see what you're looking for?</div>
-                <div class="headline"><span>Get added to our talent pool for updates on future opportunities!</span>
-                    <svg width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7.69675 1.94331L14.1079 8.35447L7.69675 14.7656" stroke="#3EEC78" stroke-width="2.40418" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                </div>
-            </a>
-        </div>
-    </div>
-</div>
-<script type="text/javascript">
-  var BTJobsData = [];
-  var BTJobsDataFiltered = [];
-  var Locations;
-  var JobCount = [];
-
-  /* Translations */
-  document.querySelector("input.keyword-search").placeholder = _e("Keyword Search");
-  document.querySelector(".filter-label.filter-job-type").textContent = _e("Select Job Type");
-  document.querySelector(".filter-label.filter-location").textContent = _e("Select a Location");
-  document.querySelector(".filter-label.filter-department").textContent = _e("Select a Team");
-  document.querySelector(".apply-anyway .super-head").textContent = _e("Don't see what you're looking for?");
-  document.querySelector(".apply-anyway .headline > span").textContent = _e("Get added to our talent pool for updates on future opportunities!");
-
-  document.querySelector(".btJobsSearch").classList.add("lang-" + currentLang);
-
-  function renderBTJobsSearch(data) {
-      reset();
-
-      document.querySelector(".apply-anyway-anchor").setAttribute('href', banner_url);
-      BTJobsData = preProcessJobData(data.jobs, 'billtrust');
-      JobCount['billtrust'] = BTJobsData.length;
-      JobCount['total'] = parseInt(BTJobsData.length);
-
-      // note the board "billtrust" is built in
-      const BTJobBoardIDS = ["billtrust2","billtrustinternships","billtrust1"];
-
-      const baseURL = "https://boards-api.greenhouse.io/v1/boards/";
-      const promises = BTJobBoardIDS.map(boardID => {
-        const url = `${baseURL}${boardID}/jobs/?content=true`;
-        return fetch(url).then(res => res.json());
-      });
-
-      Promise.all(promises)
-      .then(function(results) {
-
-        results.forEach((result, index) => {
-          const boardID = BTJobBoardIDS[index];
-          const jobs = preProcessJobData(result.jobs, boardID);
-          BTJobsData = [...BTJobsData, ...jobs];
-          JobCount[boardID] = jobs.length;
-          JobCount.total += jobs.length;
-        });
-
-        readyToGo();
-      }).catch(function (e) {
-        console.log("Error loading additional job board data");
-        console.log(e);
-      });
-
-      /*
-      Promise.all([
-        fetch("https://boards-api.greenhouse.io/v1/boards/billtrust2/jobs/").then(res => res.json()),
-        fetch("https://boards-api.greenhouse.io/v1/boards/billtrustinternships/jobs/").then(res => res.json()),
-        fetch("https://boards-api.greenhouse.io/v1/boards/billtrust1/jobs/").then(res => res.json())
-      ]).then(function (results) {
-
-        billtrust2_jobs = preProcessJobData(results[0].jobs, 'billtrust2');
-        BTJobsData = [...BTJobsData, ...billtrust2_jobs];
-        JobCount['billtrust2'] = billtrust2_jobs.length;
-        JobCount['total'] = JobCount['total'] + parseInt(billtrust2_jobs.length);
-
-        billtrustinternships_jobs = preProcessJobData(results[1].jobs, 'billtrustinternships');
-        BTJobsData = [...BTJobsData, ...billtrustinternships_jobs];
-        JobCount['billtrustinternships'] = billtrustinternships_jobs.length;
-        JobCount['total'] = JobCount['total'] + parseInt(billtrustinternships_jobs.length);
-
-        billtrust1_jobs = preProcessJobData(results[2].jobs, 'billtrust1');
-        BTJobsData = [...BTJobsData, ...billtrust1_jobs];
-        JobCount['billtrust1'] = billtrust1_jobs.length;
-        JobCount['total'] = JobCount['total'] + parseInt(billtrust1_jobs.length);
-
-        readyToGo();
-      }).catch(function () {
-        console.log("Error loading additional job board data");
-      });
-      */
-  }
-
-  function preProcessJobData( data, tag ){
-
-    // add source tag
-    data.forEach( function(job, index, object){
-      job.data_source = tag
-    });
-
-    // remove "don't see what you're looking for?" jobs
-    data = data.filter(function(element){
-      return element.internal_job_id !== null;
-    })
-
-    return data;
-  }
-
-  function readyToGo(){
-    document.querySelector(".jobs-count").textContent = BTJobsData.length + " " + _e("results");
-
-    renderJobTypeFilter();
-    renderLocationFilter();
-    renderDepartmentFilter();
-    renderJobResults(BTJobsData);
-
-    document.querySelector("body").addEventListener("click", function(event) {
-
-      if(event.target.classList.contains("filter-label")) {
-        event.target.classList.toggle("closed");
-        event.target.parentElement.querySelectorAll('input').forEach(item => item.toggleAttribute('disabled'));
-      }
-
-      if( event.target.classList.contains("filter-option-label") ){
-         event.target.querySelector("input.filter-trigger").checked = !event.target.querySelector("input.filter-trigger").checked;
-         filterResults();
-      }
-
-      if( event.target.classList.contains("checkmark") ){
-         event.target.parentElement.querySelector("input.filter-trigger").checked = !event.target.parentElement.querySelector("input.filter-trigger").checked;
-         filterResults();
-      }
-
-      if( event.target.classList.contains("filter-trigger") ){
-         event.target.checked = !event.target.checked;
-         filterResults();
-      }
-
-    });
-
-    document.querySelector(".keyword-search").addEventListener("keyup", function(event) {
-      filterResults();
-    });
-
-    var theUrl = new URL(window.location.href.replace(/#/g,"?"));
-    var keyword = theUrl.searchParams.get("keyword");
-    var location = theUrl.searchParams.get("location");
-    var team = theUrl.searchParams.get("team");
-    var type = theUrl.searchParams.get("type");
-
-    if( type !== null){
-
-      if( type.includes("|") ){
-        // multiple types
-        type.split('|').forEach( function(type){
-          if( type == "" ){ return; }
-          document.querySelector(".job-type-option[data-name-lowercase='" + type.toLowerCase() + "']").checked = true;
-          document.querySelector(".filter-job-type").classList.remove("closed");
-        });
-      }
-      else{
-
-        if( document.querySelector(".job-type-option[data-name-lowercase='" + type.toLowerCase() + "']") !== null ){
-          document.querySelector(".job-type-option[data-name-lowercase='" + type.toLowerCase() + "']").checked = true;
-          document.querySelector(".filter-job-type").classList.remove("closed");
-        }
-        else{
-          document.querySelector(".keyword-search").value = type;
-        }
-
-      }
-
-      filterResults();
-    }
-    if( location !== null){
-
-      if( location.includes("|") ){
-        // multiple locations
-        location.split('|').forEach( function(location){
-          if( location == "" ){ return; }
-          document.querySelector(".location-option[data-name-lowercase='" + location.toLowerCase() + "']").checked = true;
-          document.querySelector(".filter-location").classList.remove("closed");
-        });
-      }
-      else{
-
-        if( document.querySelector(".location-option[data-name-lowercase='" + location.toLowerCase() + "']") !== null ){
-          document.querySelector(".location-option[data-name-lowercase='" + location.toLowerCase() + "']").checked = true;
-          document.querySelector(".filter-location").classList.remove("closed");
-        }
-        else{
-          document.querySelector(".keyword-search").value = location;
-        }
-
-      }
-
-      filterResults();
-    }
-    if( team !== null){
-
-      if( team.includes("|") ){
-        // multiple teams
-        team.split('|').forEach( function(team){
-          if( team == "" ){ return; }
-          document.querySelector(".department-option[data-name-lowercase='" + team.toLowerCase() + "']").checked = true;
-          document.querySelector(".filter-department").classList.remove("closed");
-        });
-      }
-      else{
-
-        if( document.querySelector(".department-option[data-name-lowercase='" + team.toLowerCase() + "']") !== null ){
-          document.querySelector(".department-option[data-name-lowercase='" + team.toLowerCase() + "']").checked = true;
-          document.querySelector(".filter-department").classList.remove("closed");
-        }
-        else{
-          document.querySelector(".keyword-search").value = team;
-        }
-
-      }
-
-      filterResults();
-    }
-    if( keyword !== null){
-      document.querySelector(".keyword-search").value = keyword;
-      filterResults();
-    }
-
-    document.querySelectorAll(".header__utility-navigation-language-selector-options .dropdown-option a.link").forEach(element => element.href += window.location.hash);
-
-  }
-
-  function filterTags() {
-    var filterTagsContainer = document.querySelector('.filter-tags');
-    filterTagsContainer.innerHTML = '';
-
-    var jobTypeOptions = document.querySelectorAll('.job-type-option:checked');
-    var locationOptions = document.querySelectorAll('.location-option:checked');
-    var departmentOptions = document.querySelectorAll('.department-option:checked');
-    var keywordSearchInput = document.querySelector('.keyword-search');
-
-    jobTypeOptions.forEach(function (jobTypeOption) {
-      var tag = document.createElement('div');
-      tag.classList.add('filter-tag');
-      tag.textContent = jobTypeOption.value;
-      filterTagsContainer.appendChild(tag);
-
-      tag.addEventListener('click', function (event) {
-        document.querySelector('.filter-trigger[value="' + tag.textContent + '"]').checked = false;
-        filterTags();
-        filterResults();
-      });
-    });
-
-    locationOptions.forEach(function (locationOption) {
-      var tag = document.createElement('div');
-      tag.classList.add('filter-tag');
-      tag.textContent = locationOption.value;
-      filterTagsContainer.appendChild(tag);
-
-      tag.addEventListener('click', function (event) {
-        document.querySelector('.filter-trigger[value="' + tag.textContent + '"]').checked = false;
-        filterTags();
-        filterResults();
-      });
-    });
-
-    departmentOptions.forEach(function (departmentOption) {
-      var tag = document.createElement('div');
-      tag.classList.add('filter-tag');
-      tag.textContent = departmentOption.value;
-      filterTagsContainer.appendChild(tag);
-
-      tag.addEventListener('click', function (event) {
-        document.querySelector('.filter-trigger[value="' + tag.textContent + '"]').checked = false;
-        filterTags();
-        filterResults();
-      });
-    });
-
-    if (keywordSearchInput.value !== '') {
-      var keywordTag = document.createElement('div');
-      keywordTag.classList.add('filter-tag', 'keyword-tag');
-      keywordTag.textContent = _e('Keyword') + ': ' + keywordSearchInput.value;
-      filterTagsContainer.appendChild(keywordTag);
-
-      keywordTag.addEventListener('click', function (event) {
-        keywordSearchInput.value = '';
-        filterTags();
-        filterResults();
-      });
-    }
-  }
-
-  function getDepartmentName( job ){
-
-    if( !job.hasOwnProperty('departments') ){
-      return;
-    }
-
-    department = job.departments[0].name;
-
-    // remove brackets and quotes
-    department = department.replaceAll(/["\[\]]/g, '').trim();
-
-    return department;
-
-  }
-
-  function getJobTypeName( job ){
-
-    if( !job.hasOwnProperty('metadata') ){
-      return;
-    }
-
-    let job_type_meta = job.metadata.filter( function(meta){
-
-      if( meta.value !== null ){
-        if( meta.name === "Employment Type" ){
-          job_type = meta.value;
-          return job_type;
-        }
-      }
-
-    });
-
-    if( !job_type_meta || typeof job_type_meta[0] === "undefined" ){
-      return "";
-    }
-    job_type_meta = job_type_meta[0].value;
-    if( job_type_meta.length > 0 ){
-      if( typeof job_type_meta === 'object'){
-        job_type = job_type_meta[0];
-      }
-    }
-    else{
-      job_type = job_type_meta;
-    }
-
-    // remove brackets and quotes
-    job_type = job_type.replaceAll(/["\[\]]/g, '').trim();
-
-    return job_type;
-
-  }
-
-  function renderJobResults( data ){
-
-    document.querySelector(".jobs-listing").innerHTML = "";
-
-    results_text = data.length == 1 ? " " + _e("result") : " " + _e("results");
-    document.querySelector(".jobs-count").textContent = data.length + results_text;
-
-    document.querySelector(".bt-loading").style.display = "none";
-
-    if( data.length == 0 ){
-
-      let no_results_wrapper = document.createElement('div');
-          no_results_wrapper.classList.add('no-results');
-          let no_results_heading = document.createElement("h3");
-              no_results_heading.textContent = _e("No Results Found");
-          let no_results_message = document.createElement("p");
-              no_results_message.textContent = _e("No listings matched your criteria. Try searching for something else.");
-      no_results_wrapper.appendChild( no_results_heading );
-      no_results_wrapper.appendChild( no_results_message );
-      document.querySelector(".jobs-listing").appendChild(no_results_wrapper);
-
-    }
-    else{
-
-      data.forEach(function (job, index) {
-
-        let job_entry = document.createElement('div');
-            job_entry.classList.add('job-entry');
-            let info = document.createElement('div');
-                info.classList.add('info');
-            let job_title = document.createElement('div');
-                job_title.classList.add('job-title');
-                job_title_link = document.createElement('a');
-                job_title_link.href = getApplicationURL( job.id, job.data_source );
-                //job_title_link.target = "_blank";
-                  let job_title_link_text = document.createTextNode( job.title.trim() );
-                job_title_link.appendChild(job_title_link_text);
-
-                let arrow_svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-                let arrow_path = document.createElementNS('http://www.w3.org/2000/svg','path');
-                  arrow_svg.classList.add('arrow-icon');
-                  arrow_svg.setAttribute('width', '16');
-                  arrow_svg.setAttribute('height', '16');
-                  arrow_svg.setAttribute('fill', 'none');
-                  arrow_svg.setAttribute('viewBox', '0 0 21 17');
-                  arrow_path.setAttribute('d', 'M7.69675 1.94331L14.1079 8.35447L7.69675 14.7656');
-                  arrow_path.setAttribute('stroke', '#032325');
-                  arrow_path.setAttribute('stroke-width', '2.40418');
-                  arrow_path.setAttribute('stroke-linecap', 'round');
-                  arrow_path.setAttribute('stroke-linejoin', 'round');
-                  arrow_svg.appendChild(arrow_path);
-                job_title_link.appendChild( arrow_svg );
-
-                job_title.appendChild( job_title_link );
-                info.appendChild( job_title );
-            let job_department = document.createElement('div');
-                job_department.classList.add('job-department');
-            let job_department_label = document.createElement('strong');
-                job_department_label.textContent = getDepartmentName(job);
-                job_department.appendChild( job_department_label );
-            let job_type = document.createElement('span');
-                job_type.classList.add('job-type');
-                job_type.textContent = " - " + getJobTypeName(job);
-                job_department.appendChild( job_type );
-                info.appendChild( job_department );
-            let job_location = document.createElement('div');
-                job_location.classList.add('job-location');
-                job_location.textContent = job.location.name;
-                info.appendChild( job_location );
-        job_entry.appendChild( info );
-        let job_actions = document.createElement('div');
-        /*
-        let job_actions_button = document.createElement('a');
-            job_actions_button.href = getApplicationURL( job.id, job.data_source );
-            job_actions_button.classList.add('apply-button');
-            //job_actions_button.target = '_blank';
-            let job_actions_button_text = document.createTextNode( _e('Apply Now') );
-            job_actions_button.appendChild( job_actions_button_text );
-            job_actions.appendChild( job_actions_button );
-        job_entry.appendChild( job_actions );
-        */
-        document.querySelector(".jobs-listing").appendChild( job_entry );
-
-      });
-    }
-
-    doPaging();
-
-  }
-
-  function getApplicationURL( jobID, source ){
-    return language_prefix + '/careers/job-openings/careers-job-details-application?gh_jid=' + jobID + "&amp;".replace("amp;","") + 'source=' + source;
-  }
-
-  function renderJobTypeFilter(){
-    JobTypes = [... new Set(BTJobsData.map(job => getJobTypeName(job) ))];
-
-    JobTypes.sort();
-    JobTypes.forEach(function (job_type, index){
-      if( job_type == null){ return; }
-      let count = BTJobsData.filter( job => job ? getJobTypeName(job) == job_type : false ).length;
-      let job_type_option_wrapper = document.createElement('div');
-          job_type_option_wrapper.classList.add('job-type-option-wrapper');
-          let job_type_option_label = document.createElement('label');
-              job_type_option_label.classList.add('filter-option-label');
-          let job_type_option_input = document.createElement('input');
-              job_type_option_input.classList.add('job-type-option','filter-trigger','bt-checkbox');
-              job_type_option_input.type = 'checkbox';
-              job_type_option_input.name = job_type;
-              job_type_option_input.value = job_type;
-            job_type_option_input.disabled = 'true';
-              job_type_option_input.setAttribute('data-name-lowercase', job_type.toLowerCase() );
-          job_type_option_label.appendChild( job_type_option_input );
-          let job_type_option_check = document.createElement('span');
-              job_type_option_check.classList.add('checkmark');
-          job_type_option_label.appendChild( job_type_option_check );
-          let job_type_option_text = document.createTextNode( job_type + " (" + count + ")" );
-          job_type_option_label.appendChild( job_type_option_text );
-      job_type_option_wrapper.appendChild( job_type_option_label );
-      document.querySelector(".job-type-options").appendChild( job_type_option_wrapper );
-
-    })
-
-  }
-
-  function renderLocationFilter(){
-    Locations = [... new Set(BTJobsData.map( data => data.location.name.trim() ))];
-
-    // flatten locations
-    Locations.forEach(function(location, index){
-      if( location.includes(";") ){
-        grouped_location = location.split(";");
-        grouped_location.forEach(function(location){
-          if( location.trim() != "" ){
-            Locations.push( location.trim() );
-          }
-        })
-        delete Locations[index];
-      }
-    });
-    Locations = [...new Set(Locations)];
-
-    Locations.sort();
-    Locations.forEach(function (location, index){
-      if( location == null){ return; }
-      let count = BTJobsData.filter( job => job ? job.location.name.trim().includes(location) : false ).length;
-      let location_option_wrapper = document.createElement('div');
-          location_option_wrapper.classList.add('location-option-wrapper');
-          let location_option_label = document.createElement('label');
-              location_option_label.classList.add('filter-option-label');
-          let location_option_input = document.createElement('input');
-              location_option_input.classList.add('location-option','filter-trigger','bt-checkbox');
-              location_option_input.type = 'checkbox';
-              location_option_input.name = location;
-              location_option_input.value = location;
-              location_option_input.disabled = 'true';
-              location_option_input.setAttribute('data-name-lowercase', location.toLowerCase() );
-          location_option_label.appendChild( location_option_input );
-          let location_option_check = document.createElement('span');
-              location_option_check.classList.add('checkmark');
-          location_option_label.appendChild( location_option_check );
-          let location_option_text = document.createTextNode( location + " (" + count + ")" );
-          location_option_label.appendChild( location_option_text );
-      location_option_wrapper.appendChild( location_option_label );
-      document.querySelector(".location-options").appendChild( location_option_wrapper );
-
-    })
-  }
-
-  function renderDepartmentFilter(){
-
-    // loop through jobs to build out departments object that contains heirarchy of parent/child jobs and orders them properly
-    let Departments = {};
-    BTJobsData.forEach(function(job){
-      job_dep = job.departments[0];
-      if( job_dep.parent_id == null ){
-        Departments[job_dep.id] = { "name" : job_dep.name.trim(), "id" : job_dep.id, "children" : [] };
-      }
-    });
-
-    // add child departments
-    BTJobsData.forEach(function(job){
-      job_dep = job.departments[0];
-      //console.log( job_dep.name, job_dep.parent_id );
-      if( job_dep.parent_id != null ){
-        if ( job_dep.parent_id in Departments ){
-          Departments[job_dep.parent_id].children.push( { "name" : job_dep.name.trim(), "id" : job_dep.id } );
-        }
-        else{
-          // child department exists with no parent
-          Departments[job_dep.id] = { "name" : job_dep.name.trim(), "id" : job_dep.id, "children" : false };
-        }
-      }
-    });
-
-    Departments = sortDepartments(Departments);
-
-    //build flat departments
-    organizedDepartments = [];
-    for ( const key in Departments ){
-      department = Departments[key];
-      organizedDepartments.push( department );
-      if( department.hasOwnProperty('children') ){
-        if( department.children.length > 0 ){
-          children = sortDepartments( department.children );
-          children.forEach( function(childDepartment){
-            if( !organizedDepartments.some(dep => dep.id === childDepartment.id) ){
-              organizedDepartments.push(childDepartment);
+  <div class="full-width-row__container">
+    <div class="full-width-row__copy rtf">
+
+      <script type="text/javascript">
+
+        var translationStrings = {
+            "en": {
+                "Keyword Search" : "Keyword Search",
+                "Keyword" : "Keyword",
+                "Select Job Type" : "Select Job Type",
+                "Select a Location" : "Select a Location",
+                "Select a Team" : "Select a Team",
+                "result" : "result",
+                "results" : "results",
+                "No Results Found" : "No Results Found",
+                "No listings matched your criteria. Try searching for something else." : "No listings matched your criteria. Try searching for something else.",
+                "Apply Now" : "Apply Now",
+                "Don't see what you're looking for?" : "Don't see what you're looking for?",
+                "Get added to our talent pool for updates on future opportunities!" : "Get added to our talent pool for updates on future opportunities!",
+            },
+            "fr": {
+                "Keyword Search" : "Recherche par mot-clé",
+                "Keyword" : "Mot-clé",
+                "Select Job Type" : "Sélectionnez le type d'emploi",
+                "Select a Location" : "Sélectionnez un site",
+                "Select a Team" : "Sélectionnez une équipe",
+                "result" : "résultat",
+                "results" : "résultats",
+                "No Results Found" : "Aucun résultat trouvé",
+                "No listings matched your criteria. Try searching for something else." : "Aucune offre ne correspond à vos critères. Effectuez une autre recherche.",
+                "Apply Now" : "Postuler maintenant",
+                "Don't see what you're looking for?" : "Vous ne trouvez pas ce que vous cherchez?",
+                "Get added to our talent pool for updates on future opportunities!" : "Rejoignez notre vivier de talents pour être au courant des opportunités à venir!",
+            },
+            "de": {
+                "Keyword Search" : "Stichwortsuche",
+                "Keyword" : "Stichwort",
+                "Select Job Type" : "Art der Stelle auswählen",
+                "Select a Location" : "Standort auswählen",
+                "Select a Team" : "Ein Team auswählen",
+                "result" : "ergebnis",
+                "results" : "ergebnisse",
+                "No Results Found" : "Keine Ergebnisse gefunden",
+                "No listings matched your criteria. Try searching for something else." : "Es wurden keine Angebote gefunden, die Ihren Kriterien entsprechen. Bitte versuchen Sie, nach etwas anderem zu suchen.",
+                "Apply Now" : "Jetzt bewerben",
+                "Don't see what you're looking for?" : "Sie sehen nicht, wonach Sie suchen?",
+                "Get added to our talent pool for updates on future opportunities!" : "Lassen Sie sich in unseren Talentpool aufnehmen, um über künftige Stellenangebote informiert zu werden!",
+            },
+            "nl": {
+                "Keyword Search" : "Zoeken op trefwoord",
+                "Keyword" : "Trefwoord",
+                "Select Job Type" : "Selecteer type vacature",
+                "Select a Location" : "Selecteer een locatie",
+                "Select a Team" : "Selecteer een team",
+                "result" : "resultaat",
+                "results" : "resultaten",
+                "No Results Found" : "Geen resultaten gevonden",
+                "No listings matched your criteria. Try searching for something else." : "Er komen geen vermeldingen overeen met jouw criteria. Probeer iets anders te zoeken.",
+                "Apply Now" : "Solliciteer nu",
+                "Don't see what you're looking for?" : "Zie je niet wat je zoekt?",
+                "Get added to our talent pool for updates on future opportunities!" : "Kom bij onze talentpool voor updates over toekomstige kansen!",
             }
-
+        };
+        
+        var currentLang = 'en';
+        if( window.location.pathname.match(/^\/([a-zA-Z]{2})-[a-zA-Z]{2}\//) == null ){
+            currentLang = 'en';
+        }
+        else if( typeof window.location.pathname.match(/^\/([a-zA-Z]{2})-[a-zA-Z]{2}\//)[1] == "string" ){
+            if( window.location.pathname.match(/^\/([a-zA-Z]{2})-[a-zA-Z]{2}\//)[1] in translationStrings ){
+                currentLang = window.location.pathname.match(/^\/([a-zA-Z]{2})-[a-zA-Z]{2}\//)[1];
+            }
+        }
+        
+        function _e( string ){
+          return typeof translationStrings[currentLang][string] == "undefined" ? string : translationStrings[currentLang][string];
+        }
+        var language_prefix = ( currentLang == "en" ) ? "" : "/" + currentLang + "-" + currentLang;
+        
+        var banner_url = language_prefix + atob("L2NhcmVlcnMvam9iLW9wZW5pbmdzL2NhcmVlcnMtam9iLWRldGFpbHMtYXBwbGljYXRpb24jZ2hfamlkPTU0NzM4NzYwMDMmc291cmNlPWJpbGx0cnVzdDM=");
+        var style = document.createElement('style');
+          style.innerHTML = `
+            .btJobsSearch {
+                display: flex;
+                flex-wrap: wrap;
+                margin: 1em;
+            }
+        
+            .jobs-count {
+                display: inline-block;
+                width: 100%;
+                margin: 1em 0 .5em 0;
+                text-transform: uppercase;
+                font-size: 13px;
+                color: #354F51;
+                font-family: "indivisible", "Indivisible", sans-serif;
+            }
+        
+            .column {
+                flex: 1;
+            }
+        
+            .filter-sidebar {
+                flex: 1;
+                margin: 0 2em 0 0;
+                max-width: 32%;
+            }
+        
+            .filters {
+                background: #EDEEEE;
+                padding: 2em;
+            }
+        
+            .filter-row {
+                padding: 1em 1em 0 1em;
+                position: relative;
+            }
+        
+            .keyword-search {
+                background: none;
+                border: none;
+                width: 100%;
+                font-size: 18px;
+                padding: 5px 25px 5px 16px;
+                position: relative;
+            }
+        
+            .keyword-search {
+                border-bottom: 2px solid #032325;
+            }
+        
+            .keyword-search:active,
+            .keyword-search.focus-visible {
+                outline: none;
+                border-bottom: 2px solid #8F33FF;
+            }
+        
+            .job-search::after {
+                content: "";
+                background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.6316 12.606L10.0176 9.99192M11.4298 6.5966C11.4298 9.25172 9.27736 11.4041 6.62223 11.4041C3.9671 11.4041 1.8147 9.25172 1.8147 6.5966C1.8147 3.94147 3.9671 1.78906 6.62223 1.78906C9.27736 1.78906 11.4298 3.94147 11.4298 6.5966Z' stroke='%23028758' stroke-width='1.80283' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 27px;
+                height: 27px;
+                position: absolute;
+                top: 18px;
+                right: 16px;
+                cursor: pointer;
+            }
+        
+            .filter-label {
+                color: #032325;
+                font-size: 18px;
+                font-family: "indivisible", "Indivisible", sans-serif;
+                font-weight: 500;
+                padding-bottom: 1em;
+                width: 100%;
+                position: relative;
+                cursor: pointer;
+        text-align: left;
+        padding-left: 0;
+            }
+        
+            .filter-label.closed {}
+        
+            .filter-label::after {
+                border-style: solid;
+                border-width: 0.1em 0.1em 0 0;
+                content: '';
+                display: inline-block;
+                height: 0.45em;
+                right: 10px;
+                position: absolute;
+                top: 12px;
+                transform: rotate(-45deg);
+                vertical-align: top;
+                width: 0.45em;
+            }
+        
+            .filter-label:hover::after {
+                color: #028758;
+            }
+        
+            .filter-label:focus::before,
+            .filter-label:active::before,
+            .filter-label:hover::before {
+                content: "";
+                position: absolute;
+                display: block;
+                right: 0px;
+                border: 1px solid #028758;
+                width: 1.5em;
+                height: 1.5em;
+                margin-top: 0px;
+            }
+        
+            .filter-label.closed::after {
+                transform: rotate(135deg);
+                top: 7px;
+            }
+        
+            .filter-label+div {
+                /* max-height: 100vh; */
+                transition: max-height 0.4s ease-out;
+                overflow-y: hidden;
+            }
+        
+            .filter-label.closed+div {
+                max-height: 0;
+            }
+        
+            .filter-label+div>div:nth-child(1) {
+                margin-top: .2em;
+            }
+        
+            .location-option,
+            .department-option,
+            .job-type-option {
+                color: #032325;
+                font-family: 'indivisible', "Indvisible", sans-serif;
+            }
+        
+            .location-option-wrapper,
+            .department-option-wrapper,
+            .job-type-option-wrapper {
+                margin-bottom: 1.5em;
+            }
+        
+            .filter-row {
+                border-bottom: 1px solid #d2d6d8;
+            }
+        
+            .filter-row:nth-child(1) {
+                border: none;
+                padding: 1em 0 0.5em 0;
+            }
+        
+            .filter-row label {
+                display: block;
+                position: relative;
+                cursor: pointer;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                padding-left: 35px;
+                line-height: 1.25em;
+                font-family: "indivisible", "Indivisible", sans-serif;
+                font-size: 16px;
+            }
+        
+            .bt-checkbox {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+            }
+        
+            .filters .checkmark {
+                position: absolute;
+                top: -2px;
+                left: 1px;
+                height: 22px;
+                width: 22px;
+                border: 1px solid #4D6069;
+            }
+        
+            .filters input:checked~.checkmark::after {
+                content: "";
+                position: absolute;
+                left: 3px;
+                top: 3px;
+                width: 14px;
+                height: 14px;
+                background-color: #028758;
+            }
+            .filters input:checked:focus~.checkmark::after {
+                left: 2px;
+                top: 2px;
+            }
+        
+            .filters input:focus~.checkmark {
+                border: 2px solid #028758;
+            }
+        
+            .filter-tags {
+                margin-bottom: 1em;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+            }
+        
+            .filter-tag {
+                border: 2px solid #028758;
+                display: inline;
+                line-height: 1em;
+                border-radius: 30px;
+                padding: 12px 36px 12px 15px;
+                margin-right: 0.75em;
+                margin-bottom: 0.75em;
+                cursor: pointer;
+                position: relative;
+                font-size: 14px;
+                font-family: "indivisible", "Indivisible", sans-serif;
+            }
+        
+            .filter-tag::after {
+                content: "+";
+                line-height: 1em;
+                padding-left: 10px;
+                font-size: 1.7rem;
+                transform: rotate(45deg);
+                position: absolute;
+                right: 8px;
+                top: 2px;
+            }
+        
+            .filter-tag:hover {
+                color: #fff;
+                background-color: #8F33FF;
+                border-color: #8F33FF;
+            }
+        
+            .bt-loading span {
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' style='margin:auto;display:block;' width='104px' height='104px' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid'%3E%3Ccircle cx='50' cy='50' fill='none' stroke='%2311865d' stroke-width='10' r='35' stroke-dasharray='164.93361431346415 56.97787143782138'%3E%3CanimateTransform attributeName='transform' type='rotate' repeatCount='indefinite' dur='1.639344262295082s' values='0 50 50;360 50 50' keyTimes='0;1'%3E%3C/animateTransform%3E%3C/circle%3E%3C/svg%3E");
+                width: 104px;
+                height: 104px;
+                margin: 0 auto;
+                display: block;
+            }
+        
+            .job-entry {
+                border-top: 1px solid #EDEEEE;
+                display: flex;
+                justify-content: space-between;
+                padding: 2em 0;
+                position: relative;
+            }
+        
+            .job-entry .actions {
+                padding-right: 2em;
+                display: flex;
+                align-items: flex-start;
+            }
+        
+            .job-entry .job-title a {
+                font-family: "degular-display", "Degular", sans-serif;
+                font-size: 24px;
+                font-weight: 600;
+                color: #032325;
+                text-decoration: none;
+                letter-spacing: 0.75px;
+            }
+        
+            .job-entry .job-title a:hover {
+                text-decoration: underline;
+            }
+        
+            .job-title:hover svg.arrow-icon {
+                margin-left: 5px;
+                transition: margin-left .2s ease-out;
+            }
+        
+            .job-entry .job-department {
+                font-size: 16px;
+                font-weight: 400;
+                color: #032325;
+                font-family: "indivisible", "Indivisible", sans-serif;
+            }
+        
+            .job-entry .job-location {
+                font-size: 14px;
+                font-weight: 400;
+                text-transform: uppercase;
+                font-family: "indivisible", "Indivisible", sans-serif;
+                color: #4D6069;
+            }
+        
+            .apply-button {
+                font-family: "indivisible", "Indivisible", sans-serif;
+                font-weight: 500;
+                border: 2px solid #028758;
+                border-radius: 30px;
+                padding: 8px 20px;
+                text-decoration: none;
+                text-transform: capitalize;
+                color: #032325;
+                white-space: nowrap;
+            }
+        
+            .job-entry .apply-button:hover {
+                color: #fff;
+                background-color: #8F33FF;
+                border-color: #8F33FF;
+            }
+        
+            .no-results {
+                border-top: 2px solid #EDEEEE;
+                margin-top: 2.5em;
+                padding-top: 1em;
+            }
+        
+            .no-results h3 {
+                font-family: "degular-display", "Degular";
+                font-size: 22px;
+                font-weight: 600;
+            }
+        
+            .no-results p {
+                font-family: "indivisible", "Indivisible", sans-serif;
+            }
+        
+            .pagination {
+                display: flex;
+                visibility: hidden;
+                justify-content: center;
+                margin-bottom: 2em;
+                user-select: none;
+            }
+        
+            .page-prev,
+            .page-next {
+                cursor: pointer;
+            }
+        
+            ul.pages {
+                display: flex;
+                margin: 0 1em;
+                padding: 0;
+            }
+        
+            ul.pages li {
+                list-style: none;
+                display: inline-block;
+                margin: 0.5em;
+            }
+            ul.pages li:before{
+                display: none !important;
+            }
+        
+            .pages li a {
+                color: #00373B;
+                text-decoration: none;
+                font-family: 'Indivisible';
+                font-style: normal;
+                font-weight: 500;
+                padding: .1em;
+                font-size: 20px;
+                line-height: 1em;
+        
+            }
+        
+            .pages li a:hover {
+                text-decoration: underline;
+            }
+        
+            .pages li a.active {
+                color: #028758;
+                text-decoration: underline;
+            }
+        
+            .apply-anyway {
+                background-color: #00373B;
+                background-image: url("/-/media/images/content/careers-apply-anyway-banner-background.jpg");
+                background-repeat: no-repeat;
+                background-size: contain;
+                margin: 0 auto 0 auto;
+                color: #fff;
+                padding: 2em 0em 2em 2em;
+                display: flex;
+                flex-direction: row-reverse;
+            }
+        
+            .apply-anyway a {
+                display: block;
+                text-decoration: none;
+            }
+        
+            .super-head {
+                color: #fff;
+                font-family: "Indivisible", 'indivisible', sans-serif;
+                font-style: normal;
+                font-weight: 200;
+                text-transform: uppercase;
+                font-size: 14px;
+            }
+        
+            .headline {
+                color: #fff;
+                max-width: 400px;
+                font-family: "degular-display", "Degular", sans-serif;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 115%;
+                padding-right: 2em;
+            }
+        
+            .headline svg {
+                display: inline-block;
+                margin-bottom: -2px;
+            }
+        
+            .apply-anyway a:hover .headline svg {
+                margin-left: 6px;
+            }
+        
+        
+            .rtf ul li:before {
+                display: none;
+            }
+        
+            .sub-department .filter-option-label {
+              padding-left: 70px;
+            }
+            .sub-department .filter-option-label .checkmark {
+              left: 36px;
+            }
+        
+            @media(max-width:1023px) {
+                .btJobsSearch {
+                    flex-direction: column;
+                }
+        
+                .filter-sidebar {
+                    max-width: 100%;
+                    margin-right: 0;
+                }
+            }
+        
+            @media (min-width:719px) {
+                .apply-anyway .headline {
+                    padding-left: 0;
+                }
+            }
+        
+            @media (max-width:720px) {
+                .apply-anyway {
+                    background-image: none;
+                    justify-content: center;
+                }
+            }
+        
+            @media (max-width:500px) {
+                .job-entry {
+                    flex-direction: column;
+                }
+        
+                .job-entry .info {
+                    margin-bottom: 1em;
+                }
+            }
+        
+            @media (min-width:720px) and (max-width:1279px) {
+                .apply-anyway .headline {
+                    padding-left: 1em;
+                    padding-right: 1em;
+                }
+        
+                .apply-anyway .super-head {
+                    padding-left: 1.7em;
+                }
+        
+                .filters {
+                    padding: 1em;
+                }
+            }
+        
+            @media (max-width: 480px) {
+                .btJobsSearch {
+                    margin: 0;
+                }
+        
+                .filters {
+                    padding: 0em;
+                }
+            }
+          `;
+          document.head.appendChild(style);
+        </script>
+        <div class="btJobsSearch">
+            <div class="filter-sidebar">
+                <div class="filters">
+                    <div class="filter-row">
+                        <div class="job-search">
+                            <input class="keyword-search" placeholder="Keyword Search" type="text" />
+                        </div>
+                    </div>
+                    <div class="filter-row">
+                        <button class="filter-label closed filter-job-type">
+                            Select Job Type
+                        </button>
+                        <div class="job-type-options">&nbsp;</div>
+                    </div>
+                    <div class="filter-row">
+                        <button class="filter-label closed filter-location">
+                            Select a Location
+                        </button>
+                        <div class="location-options">&nbsp;</div>
+                    </div>
+                    <div class="filter-row">
+                        <button class="filter-label closed filter-department">
+                            Select a Team
+                        </button>
+                        <div class="department-options"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="jobs-count">&nbsp;</div>
+                <div class="filter-tags"></div>
+                <div class="bt-loading"><span></span></div>
+                <div class="jobs-listing"></div>
+                <div class="pagination">
+                  <a class="page-prev"><svg width="30" height="20" viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.49756 9.65039H27.6603" stroke="#00373B" stroke-width="1.83515" stroke-linecap="round"/><path d="M8.69753 17.9085L1.35693 9.95622L8.69753 2.00391" stroke="#00373B" stroke-width="1.83515" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                  <ul class="pages"></ul>
+                  <a class="page-next"><svg width="30" height="20" viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25.5054 9.65039H1.34259" stroke="#00373B" stroke-width="1.83515" stroke-linecap="round"/><path d="M20.3059 17.9085L27.6465 9.95622L20.3059 2.00391" stroke="#00373B" stroke-width="1.83515" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                </div>
+                <div class="apply-anyway">
+                    <a class="apply-anyway-anchor">
+                        <div class="super-head">"Don't see what you're looking for?</div>
+                        <div class="headline"><span>Get added to our talent pool for updates on future opportunities!</span>
+                            <svg width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.69675 1.94331L14.1079 8.35447L7.69675 14.7656" stroke="#3EEC78" stroke-width="2.40418" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+          var BTJobsData = [];
+          var BTJobsDataFiltered = [];
+          var Locations;
+          var JobCount = [];
+        
+          /* Translations */
+          document.querySelector("input.keyword-search").placeholder = _e("Keyword Search");
+          document.querySelector(".filter-label.filter-job-type").textContent = _e("Select Job Type");
+          document.querySelector(".filter-label.filter-location").textContent = _e("Select a Location");
+          document.querySelector(".filter-label.filter-department").textContent = _e("Select a Team");
+          document.querySelector(".apply-anyway .super-head").textContent = _e("Don't see what you're looking for?");
+          document.querySelector(".apply-anyway .headline > span").textContent = _e("Get added to our talent pool for updates on future opportunities!");
+        
+          document.querySelector(".btJobsSearch").classList.add("lang-" + currentLang);
+        
+          function renderBTJobsSearch(data) {
+              reset();
+        
+              document.querySelector(".apply-anyway-anchor").setAttribute('href', banner_url);
+              BTJobsData = preProcessJobData(data.jobs, 'billtrust');
+              JobCount['billtrust'] = BTJobsData.length;
+              JobCount['total'] = parseInt(BTJobsData.length);
+        
+              // note the board "billtrust" is built in
+              const BTJobBoardIDS = ["billtrust2","billtrustinternships","billtrust1"];
+        
+              const baseURL = "https://boards-api.greenhouse.io/v1/boards/";
+              const promises = BTJobBoardIDS.map(boardID => {
+                const url = `${baseURL}${boardID}/jobs/?content=true`;
+                return fetch(url).then(res => res.json());
+              });
+        
+              Promise.all(promises)
+              .then(function(results) {
+        
+                results.forEach((result, index) => {
+                  const boardID = BTJobBoardIDS[index];
+                  const jobs = preProcessJobData(result.jobs, boardID);
+                  BTJobsData = [...BTJobsData, ...jobs];
+                  JobCount[boardID] = jobs.length;
+                  JobCount.total += jobs.length;
+                });
+        
+                readyToGo();
+              }).catch(function (e) {
+                console.log("Error loading additional job board data");
+                console.log(e);
+              });
+        
+              /*
+              Promise.all([
+                fetch("https://boards-api.greenhouse.io/v1/boards/billtrust2/jobs/").then(res => res.json()),
+                fetch("https://boards-api.greenhouse.io/v1/boards/billtrustinternships/jobs/").then(res => res.json()),
+                fetch("https://boards-api.greenhouse.io/v1/boards/billtrust1/jobs/").then(res => res.json())
+              ]).then(function (results) {
+        
+                billtrust2_jobs = preProcessJobData(results[0].jobs, 'billtrust2');
+                BTJobsData = [...BTJobsData, ...billtrust2_jobs];
+                JobCount['billtrust2'] = billtrust2_jobs.length;
+                JobCount['total'] = JobCount['total'] + parseInt(billtrust2_jobs.length);
+        
+                billtrustinternships_jobs = preProcessJobData(results[1].jobs, 'billtrustinternships');
+                BTJobsData = [...BTJobsData, ...billtrustinternships_jobs];
+                JobCount['billtrustinternships'] = billtrustinternships_jobs.length;
+                JobCount['total'] = JobCount['total'] + parseInt(billtrustinternships_jobs.length);
+        
+                billtrust1_jobs = preProcessJobData(results[2].jobs, 'billtrust1');
+                BTJobsData = [...BTJobsData, ...billtrust1_jobs];
+                JobCount['billtrust1'] = billtrust1_jobs.length;
+                JobCount['total'] = JobCount['total'] + parseInt(billtrust1_jobs.length);
+        
+                readyToGo();
+              }).catch(function () {
+                console.log("Error loading additional job board data");
+              });
+              */
+          }
+        
+          function preProcessJobData( data, tag ){
+        
+            // add source tag
+            data.forEach( function(job, index, object){
+              job.data_source = tag
+            });
+        
+            // remove "don't see what you're looking for?" jobs
+            data = data.filter(function(element){
+              return element.internal_job_id !== null;
+            })
+        
+            return data;
+          }
+        
+          function readyToGo(){
+            document.querySelector(".jobs-count").textContent = BTJobsData.length + " " + _e("results");
+        
+            renderJobTypeFilter();
+            renderLocationFilter();
+            renderDepartmentFilter();
+            renderJobResults(BTJobsData);
+        
+            document.querySelector("body").addEventListener("click", function(event) {
+        
+              if(event.target.classList.contains("filter-label")) {
+                event.target.classList.toggle("closed");
+                event.target.parentElement.querySelectorAll('input').forEach(item => item.toggleAttribute('disabled'));
+              }
+        
+              if( event.target.classList.contains("filter-option-label") ){
+                 event.target.querySelector("input.filter-trigger").checked = !event.target.querySelector("input.filter-trigger").checked;
+                 filterResults();
+              }
+        
+              if( event.target.classList.contains("checkmark") ){
+                 event.target.parentElement.querySelector("input.filter-trigger").checked = !event.target.parentElement.querySelector("input.filter-trigger").checked;
+                 filterResults();
+              }
+        
+              if( event.target.classList.contains("filter-trigger") ){
+                 event.target.checked = !event.target.checked;
+                 filterResults();
+              }
+        
+            });
+        
+            document.querySelector(".keyword-search").addEventListener("keyup", function(event) {
+              filterResults();
+            });
+        
+            var theUrl = new URL(window.location.href.replace(/#/g,"?"));
+            var keyword = theUrl.searchParams.get("keyword");
+            var location = theUrl.searchParams.get("location");
+            var team = theUrl.searchParams.get("team");
+            var type = theUrl.searchParams.get("type");
+        
+            if( type !== null){
+        
+              if( type.includes("|") ){
+                // multiple types
+                type.split('|').forEach( function(type){
+                  if( type == "" ){ return; }
+                  document.querySelector(".job-type-option[data-name-lowercase='" + type.toLowerCase() + "']").checked = true;
+                  document.querySelector(".filter-job-type").classList.remove("closed");
+                });
+              }
+              else{
+        
+                if( document.querySelector(".job-type-option[data-name-lowercase='" + type.toLowerCase() + "']") !== null ){
+                  document.querySelector(".job-type-option[data-name-lowercase='" + type.toLowerCase() + "']").checked = true;
+                  document.querySelector(".filter-job-type").classList.remove("closed");
+                }
+                else{
+                  document.querySelector(".keyword-search").value = type;
+                }
+        
+              }
+        
+              filterResults();
+            }
+            if( location !== null){
+        
+              if( location.includes("|") ){
+                // multiple locations
+                location.split('|').forEach( function(location){
+                  if( location == "" ){ return; }
+                  document.querySelector(".location-option[data-name-lowercase='" + location.toLowerCase() + "']").checked = true;
+                  document.querySelector(".filter-location").classList.remove("closed");
+                });
+              }
+              else{
+        
+                if( document.querySelector(".location-option[data-name-lowercase='" + location.toLowerCase() + "']") !== null ){
+                  document.querySelector(".location-option[data-name-lowercase='" + location.toLowerCase() + "']").checked = true;
+                  document.querySelector(".filter-location").classList.remove("closed");
+                }
+                else{
+                  document.querySelector(".keyword-search").value = location;
+                }
+        
+              }
+        
+              filterResults();
+            }
+            if( team !== null){
+        
+              if( team.includes("|") ){
+                // multiple teams
+                team.split('|').forEach( function(team){
+                  if( team == "" ){ return; }
+                  document.querySelector(".department-option[data-name-lowercase='" + team.toLowerCase() + "']").checked = true;
+                  document.querySelector(".filter-department").classList.remove("closed");
+                });
+              }
+              else{
+        
+                if( document.querySelector(".department-option[data-name-lowercase='" + team.toLowerCase() + "']") !== null ){
+                  document.querySelector(".department-option[data-name-lowercase='" + team.toLowerCase() + "']").checked = true;
+                  document.querySelector(".filter-department").classList.remove("closed");
+                }
+                else{
+                  document.querySelector(".keyword-search").value = team;
+                }
+        
+              }
+        
+              filterResults();
+            }
+            if( keyword !== null){
+              document.querySelector(".keyword-search").value = keyword;
+              filterResults();
+            }
+        
+            document.querySelectorAll(".header__utility-navigation-language-selector-options .dropdown-option a.link").forEach(element => element.href += window.location.hash);
+        
+          }
+        
+          function filterTags() {
+            var filterTagsContainer = document.querySelector('.filter-tags');
+            filterTagsContainer.innerHTML = '';
+        
+            var jobTypeOptions = document.querySelectorAll('.job-type-option:checked');
+            var locationOptions = document.querySelectorAll('.location-option:checked');
+            var departmentOptions = document.querySelectorAll('.department-option:checked');
+            var keywordSearchInput = document.querySelector('.keyword-search');
+        
+            jobTypeOptions.forEach(function (jobTypeOption) {
+              var tag = document.createElement('div');
+              tag.classList.add('filter-tag');
+              tag.textContent = jobTypeOption.value;
+              filterTagsContainer.appendChild(tag);
+        
+              tag.addEventListener('click', function (event) {
+                document.querySelector('.filter-trigger[value="' + tag.textContent + '"]').checked = false;
+                filterTags();
+                filterResults();
+              });
+            });
+        
+            locationOptions.forEach(function (locationOption) {
+              var tag = document.createElement('div');
+              tag.classList.add('filter-tag');
+              tag.textContent = locationOption.value;
+              filterTagsContainer.appendChild(tag);
+        
+              tag.addEventListener('click', function (event) {
+                document.querySelector('.filter-trigger[value="' + tag.textContent + '"]').checked = false;
+                filterTags();
+                filterResults();
+              });
+            });
+        
+            departmentOptions.forEach(function (departmentOption) {
+              var tag = document.createElement('div');
+              tag.classList.add('filter-tag');
+              tag.textContent = departmentOption.value;
+              filterTagsContainer.appendChild(tag);
+        
+              tag.addEventListener('click', function (event) {
+                document.querySelector('.filter-trigger[value="' + tag.textContent + '"]').checked = false;
+                filterTags();
+                filterResults();
+              });
+            });
+        
+            if (keywordSearchInput.value !== '') {
+              var keywordTag = document.createElement('div');
+              keywordTag.classList.add('filter-tag', 'keyword-tag');
+              keywordTag.textContent = _e('Keyword') + ': ' + keywordSearchInput.value;
+              filterTagsContainer.appendChild(keywordTag);
+        
+              keywordTag.addEventListener('click', function (event) {
+                keywordSearchInput.value = '';
+                filterTags();
+                filterResults();
+              });
+            }
+          }
+        
+          function getDepartmentName( job ){
+        
+            if( !job.hasOwnProperty('departments') ){
+              return;
+            }
+        
+            department = job.departments[0].name;
+        
+            // remove brackets and quotes
+            department = department.replaceAll(/["\[\]]/g, '').trim();
+        
+            return department;
+        
+          }
+        
+          function getJobTypeName( job ){
+        
+            if( !job.hasOwnProperty('metadata') ){
+              return;
+            }
+        
+            let job_type_meta = job.metadata.filter( function(meta){
+        
+              if( meta.value !== null ){
+                if( meta.name === "Employment Type" ){
+                  job_type = meta.value;
+                  return job_type;
+                }
+              }
+        
+            });
+        
+            if( !job_type_meta || typeof job_type_meta[0] === "undefined" ){
+              return "";
+            }
+            job_type_meta = job_type_meta[0].value;
+            if( job_type_meta.length > 0 ){
+              if( typeof job_type_meta === 'object'){
+                job_type = job_type_meta[0];
+              }
+            }
+            else{
+              job_type = job_type_meta;
+            }
+        
+            // remove brackets and quotes
+            job_type = job_type.replaceAll(/["\[\]]/g, '').trim();
+        
+            return job_type;
+        
+          }
+        
+          function renderJobResults( data ){
+        
+            document.querySelector(".jobs-listing").innerHTML = "";
+        
+            results_text = data.length == 1 ? " " + _e("result") : " " + _e("results");
+            document.querySelector(".jobs-count").textContent = data.length + results_text;
+        
+            document.querySelector(".bt-loading").style.display = "none";
+        
+            if( data.length == 0 ){
+        
+              let no_results_wrapper = document.createElement('div');
+                  no_results_wrapper.classList.add('no-results');
+                  let no_results_heading = document.createElement("h3");
+                      no_results_heading.textContent = _e("No Results Found");
+                  let no_results_message = document.createElement("p");
+                      no_results_message.textContent = _e("No listings matched your criteria. Try searching for something else.");
+              no_results_wrapper.appendChild( no_results_heading );
+              no_results_wrapper.appendChild( no_results_message );
+              document.querySelector(".jobs-listing").appendChild(no_results_wrapper);
+        
+            }
+            else{
+        
+              data.forEach(function (job, index) {
+        
+                let job_entry = document.createElement('div');
+                    job_entry.classList.add('job-entry');
+                    let info = document.createElement('div');
+                        info.classList.add('info');
+                    let job_title = document.createElement('div');
+                        job_title.classList.add('job-title');
+                        job_title_link = document.createElement('a');
+                        job_title_link.href = getApplicationURL( job.id, job.data_source );
+                        //job_title_link.target = "_blank";
+                          let job_title_link_text = document.createTextNode( job.title.trim() );
+                        job_title_link.appendChild(job_title_link_text);
+        
+                        let arrow_svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+                        let arrow_path = document.createElementNS('http://www.w3.org/2000/svg','path');
+                          arrow_svg.classList.add('arrow-icon');
+                          arrow_svg.setAttribute('width', '16');
+                          arrow_svg.setAttribute('height', '16');
+                          arrow_svg.setAttribute('fill', 'none');
+                          arrow_svg.setAttribute('viewBox', '0 0 21 17');
+                          arrow_path.setAttribute('d', 'M7.69675 1.94331L14.1079 8.35447L7.69675 14.7656');
+                          arrow_path.setAttribute('stroke', '#032325');
+                          arrow_path.setAttribute('stroke-width', '2.40418');
+                          arrow_path.setAttribute('stroke-linecap', 'round');
+                          arrow_path.setAttribute('stroke-linejoin', 'round');
+                          arrow_svg.appendChild(arrow_path);
+                        job_title_link.appendChild( arrow_svg );
+        
+                        job_title.appendChild( job_title_link );
+                        info.appendChild( job_title );
+                    let job_department = document.createElement('div');
+                        job_department.classList.add('job-department');
+                    let job_department_label = document.createElement('strong');
+                        job_department_label.textContent = getDepartmentName(job);
+                        job_department.appendChild( job_department_label );
+                    let job_type = document.createElement('span');
+                        job_type.classList.add('job-type');
+                        job_type.textContent = " - " + getJobTypeName(job);
+                        job_department.appendChild( job_type );
+                        info.appendChild( job_department );
+                    let job_location = document.createElement('div');
+                        job_location.classList.add('job-location');
+                        job_location.textContent = job.location.name;
+                        info.appendChild( job_location );
+                job_entry.appendChild( info );
+                let job_actions = document.createElement('div');
+                /*
+                let job_actions_button = document.createElement('a');
+                    job_actions_button.href = getApplicationURL( job.id, job.data_source );
+                    job_actions_button.classList.add('apply-button');
+                    //job_actions_button.target = '_blank';
+                    let job_actions_button_text = document.createTextNode( _e('Apply Now') );
+                    job_actions_button.appendChild( job_actions_button_text );
+                    job_actions.appendChild( job_actions_button );
+                job_entry.appendChild( job_actions );
+                */
+                document.querySelector(".jobs-listing").appendChild( job_entry );
+        
+              });
+            }
+        
+            doPaging();
+        
+          }
+        
+          function getApplicationURL( jobID, source ){
+            return language_prefix + '/bt-greenhouse-job-description.html?gh_jid=' + jobID + "&amp;".replace("amp;","") + 'source=' + source;
+          }
+        
+          function renderJobTypeFilter(){
+            JobTypes = [... new Set(BTJobsData.map(job => getJobTypeName(job) ))];
+        
+            JobTypes.sort();
+            JobTypes.forEach(function (job_type, index){
+              if( job_type == null){ return; }
+              let count = BTJobsData.filter( job => job ? getJobTypeName(job) == job_type : false ).length;
+              let job_type_option_wrapper = document.createElement('div');
+                  job_type_option_wrapper.classList.add('job-type-option-wrapper');
+                  let job_type_option_label = document.createElement('label');
+                      job_type_option_label.classList.add('filter-option-label');
+                  let job_type_option_input = document.createElement('input');
+                      job_type_option_input.classList.add('job-type-option','filter-trigger','bt-checkbox');
+                      job_type_option_input.type = 'checkbox';
+                      job_type_option_input.name = job_type;
+                      job_type_option_input.value = job_type;
+                    job_type_option_input.disabled = 'true';
+                      job_type_option_input.setAttribute('data-name-lowercase', job_type.toLowerCase() );
+                  job_type_option_label.appendChild( job_type_option_input );
+                  let job_type_option_check = document.createElement('span');
+                      job_type_option_check.classList.add('checkmark');
+                  job_type_option_label.appendChild( job_type_option_check );
+                  let job_type_option_text = document.createTextNode( job_type + " (" + count + ")" );
+                  job_type_option_label.appendChild( job_type_option_text );
+              job_type_option_wrapper.appendChild( job_type_option_label );
+              document.querySelector(".job-type-options").appendChild( job_type_option_wrapper );
+        
+            })
+        
+          }
+        
+          function renderLocationFilter(){
+            Locations = [... new Set(BTJobsData.map( data => data.location.name.trim() ))];
+        
+            // flatten locations
+            Locations.forEach(function(location, index){
+              if( location.includes(";") ){
+                grouped_location = location.split(";");
+                grouped_location.forEach(function(location){
+                  if( location.trim() != "" ){
+                    Locations.push( location.trim() );
+                  }
+                })
+                delete Locations[index];
+              }
+            });
+            Locations = [...new Set(Locations)];
+        
+            Locations.sort();
+            Locations.forEach(function (location, index){
+              if( location == null){ return; }
+              let count = BTJobsData.filter( job => job ? job.location.name.trim().includes(location) : false ).length;
+              let location_option_wrapper = document.createElement('div');
+                  location_option_wrapper.classList.add('location-option-wrapper');
+                  let location_option_label = document.createElement('label');
+                      location_option_label.classList.add('filter-option-label');
+                  let location_option_input = document.createElement('input');
+                      location_option_input.classList.add('location-option','filter-trigger','bt-checkbox');
+                      location_option_input.type = 'checkbox';
+                      location_option_input.name = location;
+                      location_option_input.value = location;
+                      location_option_input.disabled = 'true';
+                      location_option_input.setAttribute('data-name-lowercase', location.toLowerCase() );
+                  location_option_label.appendChild( location_option_input );
+                  let location_option_check = document.createElement('span');
+                      location_option_check.classList.add('checkmark');
+                  location_option_label.appendChild( location_option_check );
+                  let location_option_text = document.createTextNode( location + " (" + count + ")" );
+                  location_option_label.appendChild( location_option_text );
+              location_option_wrapper.appendChild( location_option_label );
+              document.querySelector(".location-options").appendChild( location_option_wrapper );
+        
+            })
+          }
+        
+          function renderDepartmentFilter(){
+        
+            // loop through jobs to build out departments object that contains heirarchy of parent/child jobs and orders them properly
+            let Departments = {};
+            BTJobsData.forEach(function(job){
+              job_dep = job.departments[0];
+              if( job_dep.parent_id == null ){
+                Departments[job_dep.id] = { "name" : job_dep.name.trim(), "id" : job_dep.id, "children" : [] };
+              }
+            });
+        
+            // add child departments
+            BTJobsData.forEach(function(job){
+              job_dep = job.departments[0];
+              //console.log( job_dep.name, job_dep.parent_id );
+              if( job_dep.parent_id != null ){
+                if ( job_dep.parent_id in Departments ){
+                  Departments[job_dep.parent_id].children.push( { "name" : job_dep.name.trim(), "id" : job_dep.id } );
+                }
+                else{
+                  // child department exists with no parent
+                  Departments[job_dep.id] = { "name" : job_dep.name.trim(), "id" : job_dep.id, "children" : false };
+                }
+              }
+            });
+        
+            Departments = sortDepartments(Departments);
+        
+            //build flat departments
+            organizedDepartments = [];
+            for ( const key in Departments ){
+              department = Departments[key];
+              organizedDepartments.push( department );
+              if( department.hasOwnProperty('children') ){
+                if( department.children.length > 0 ){
+                  children = sortDepartments( department.children );
+                  children.forEach( function(childDepartment){
+                    if( !organizedDepartments.some(dep => dep.id === childDepartment.id) ){
+                      organizedDepartments.push(childDepartment);
+                    }
+        
+                  });
+                }
+              }
+            }
+        
+            for( const key in organizedDepartments ){
+              if( organizedDepartments.hasOwnProperty(key) ){
+        
+                const department = organizedDepartments[key];
+                if( department.name == null || department.name === '' ){ return; }
+                let count = BTJobsData.filter( job => job ? getDepartmentName(job) == department.name : false ).length;
+                let department_option_wrapper = document.createElement('div');
+                    department_option_wrapper.classList.add('department-option-wrapper');
+                    if( !department.hasOwnProperty("children") ){
+                      department_option_wrapper.classList.add('sub-department');
+                    }
+                    let department_option_label = document.createElement('label');
+                        department_option_label.classList.add('filter-option-label');
+                    let department_option_input = document.createElement('input');
+                        department_option_input.classList.add('department-option','filter-trigger','bt-checkbox');
+                        department_option_input.type = 'checkbox';
+                        department_option_input.name = department.name;
+                        department_option_input.value = department.name;
+                        department_option_input.disabled = 'true';
+                        department_option_input.setAttribute('data-name-lowercase', department.name.toLowerCase() );
+                    department_option_label.appendChild( department_option_input );
+                    let department_option_check = document.createElement('span');
+                        department_option_check.classList.add('checkmark');
+                    department_option_label.appendChild( department_option_check );
+                    let department_option_text = document.createTextNode( department.name + " (" + count + ")" );
+                    department_option_label.appendChild( department_option_text );
+                department_option_wrapper.appendChild( department_option_label );
+                document.querySelector(".department-options").appendChild( department_option_wrapper );
+        
+              }
+            }
+        
+          }
+        
+          function filterResults() {
+            // start with fresh filter
+            BTJobsDataFiltered = BTJobsData;
+        
+            filterTags();
+        
+            //job-type
+            var selected_job_types = document.querySelectorAll(".job-type-option:checked");
+            if (selected_job_types.length > 0) {
+              BTJobsDataFiltered = BTJobsDataFiltered.filter(function(job) {
+                if (Array.from(selected_job_types).map(function(el) { return el.value }).includes(getJobTypeName(job))) {
+                  return job;
+                }
+              });
+            }
+        
+            //location
+            var selected_locations = document.querySelectorAll(".location-option:checked");
+            if (selected_locations.length > 0) {
+              BTJobsDataFiltered = BTJobsDataFiltered.filter(function(job) {
+                location_match = Array.from(selected_locations).filter(function(el) {
+                  return job ? job.location.name.includes(el.value) : false;
+                });
+                return location_match.length > 0 ? location_match : false;
+              });
+            }
+        
+            //department
+            var selected_departments = document.querySelectorAll(".department-option:checked");
+            if (selected_departments.length > 0) {
+              BTJobsDataFiltered = BTJobsDataFiltered.filter(function(job) {
+                if (Array.from(selected_departments).map(function(el) { return el.value }).includes(getDepartmentName(job))) {
+                  return job;
+                }
+              });
+            }
+        
+            // keyword
+            var query = document.querySelector(".keyword-search").value;
+            if (query != "") {
+              BTJobsDataFiltered = BTJobsDataFiltered.filter(function(job) {
+                return jobKeywordSearchValues(job).toLowerCase().includes(query.toLowerCase()) ? job : false;
+              });
+            }
+        
+            renderJobResults(BTJobsDataFiltered);
+        
+            updateHash();
+          }
+        
+          function doPaging() {
+            var pageSize = 9;
+            var realpageSize = 10;
+            var increment = 5;
+            var startPage = 0;
+            var numberPage = 0;
+            var totalItems = document.querySelectorAll(".jobs-listing .job-entry").length;
+        
+            if (11 > totalItems) {
+              document.querySelector(".pagination").style.visibility = "hidden";
+              return;
+            }
+        
+            var totalPages = Math.ceil(totalItems / (pageSize + 1));
+            document.querySelector(".pagination").style.visibility = "initial";
+            document.querySelector("ul.pages").innerHTML = "";
+        
+            Array.apply(null, Array(totalPages)).map(function (x, i) {
+              var li = document.createElement("li");
+              var a = document.createElement("a");
+              a.href = "#";
+              a.textContent = i + 1;
+              a.dataset.page = i + 1;
+              li.appendChild(a);
+              document.querySelector("ul.pages").appendChild(li);
+            });
+        
+            document.querySelector(".page-next").addEventListener("click", function () {
+              startPage += realpageSize;
+              increment += realpageSize;
+              numberPage++;
+              page();
+            });
+        
+            document.querySelector(".page-prev").addEventListener("click", function () {
+              startPage -= realpageSize;
+              increment -= realpageSize;
+              numberPage--;
+              page();
+            });
+        
+            var pages = document.querySelectorAll(".pages li a");
+            Array.prototype.map.call(pages, function(page) {
+              page.addEventListener("click", function(e) {
+                e.preventDefault();
+                showPage(this.textContent);
+              });
+            });
+        
+            function page() {
+              var jobEntries = document.querySelectorAll(".jobs-listing .job-entry");
+              Array.prototype.map.call(jobEntries, function(jobEntry) {
+                jobEntry.style.display = "none";
+              });
+        
+              Array.prototype.map.call(Array.from({ length: pageSize + 1 }), function(_, i) {
+                var itemIndex = i + startPage;
+                if (jobEntries[itemIndex]) {
+                  jobEntries[itemIndex].style.display = "flex";
+                }
+              });
+        
+              var pageLinks = document.querySelectorAll(".pages li a");
+              Array.prototype.map.call(pageLinks, function(pageLink) {
+                pageLink.classList.remove("active");
+              });
+              document.querySelector(
+                ".pages li a[data-page='" + (numberPage + 1) + "']"
+              ).classList.add("active");
+        
+              if (numberPage + 1 == totalPages) {
+                document.querySelector(".page-next").style.display = "none";
+              } else {
+                document.querySelector(".page-next").style.display = "block";
+              }
+        
+              if (numberPage + 1 == 1) {
+                document.querySelector(".page-prev").style.display = "none";
+              } else {
+                document.querySelector(".page-prev").style.display = "block";
+              }
+            }
+        
+            function showPage(pageNumber) {
+              increment = pageNumber * realpageSize;
+              startPage = increment - realpageSize;
+              numberPage = pageNumber - 1;
+              page();
+            }
+        
+            showPage(1);
+          }
+        
+          function reset(){
+            document.querySelectorAll('.jobs-listing, .job-type-options, .location-options, .department-options').forEach(element => element.innerHTML = '');
+          }
+        
+          function jobKeywordSearchValues(obj) {
+            let values = "";
+            let allowedProperties = ["data_source", "id", "internal_job_id", "name", "title", "value"];
+            for (let key in obj) {
+              if (obj.hasOwnProperty(key)) {
+                let value = obj[key];
+                if (typeof value === "object") {
+                  values += " " + jobKeywordSearchValues(value, allowedProperties);
+                } else {
+                  if (allowedProperties.includes(key) || Number.isInteger(key) ) {
+                    values += " " + value + " ";
+                  }
+                }
+              }
+            }
+            return values.trim();
+          }
+        
+          function sortDepartments(departments) {
+            const sortedEntries = Object.entries(departments).sort((a, b) => {
+              const nameA = a[1]["name"].toUpperCase();
+              const nameB = b[1]["name"].toUpperCase();
+              return nameA.localeCompare(nameB);
+            });
+        
+            const sortedObject = [];
+            sortedEntries.forEach(([key, value]) => {
+              sortedObject.push(value);
+            });
+            return sortedObject;
+          }
+        
+          function updateHash(){
+            hashData = new Object();
+            history.replaceState(null, document.title, window.location.pathname);
+        
+            //keyword
+            var query = document.querySelector(".keyword-search").value;
+            if (query != "") {
+              hashData['keyword'] = query;
+            }
+        
+            //job type
+            var selected_job_types = document.querySelectorAll(".job-type-option:checked");
+            if (selected_job_types.length > 0) {
+              hashData['type'] = Array.from(document.querySelectorAll(".job-type-option:checked")).map( input => input.value ).join('|')
+            }
+        
+            //location
+            var selected_locations = document.querySelectorAll(".location-option:checked");
+            if (selected_locations.length > 0) {
+              hashData['location'] = Array.from(document.querySelectorAll(".location-option:checked")).map( input => input.value ).join('|')
+            }
+        
+            //department
+            var selected_departments = document.querySelectorAll(".department-option:checked");
+            if (selected_departments.length > 0) {
+              hashData['team'] = Array.from(document.querySelectorAll(".department-option:checked")).map( input => input.value ).join('|');
+            }
+        
+            hashParams = new URLSearchParams( hashData );
+            if( hashParams.toString() != "" ){
+              history.pushState(null, document.title, "#" + hashParams.toString() );
+            }
+          }
+        
+        </script>
+        
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            const greenhouse_script = document.createElement('script');
+            greenhouse_script.src = "https://boards-api.greenhouse.io/v1/boards/billtrust/jobs/?callback=renderBTJobsSearch" + decodeURIComponent("%26") + "content=true";
+            document.head.appendChild(greenhouse_script);
           });
-        }
-      }
-    }
+        </script>
 
-    for( const key in organizedDepartments ){
-      if( organizedDepartments.hasOwnProperty(key) ){
 
-        const department = organizedDepartments[key];
-        if( department.name == null || department.name === '' ){ return; }
-        let count = BTJobsData.filter( job => job ? getDepartmentName(job) == department.name : false ).length;
-        let department_option_wrapper = document.createElement('div');
-            department_option_wrapper.classList.add('department-option-wrapper');
-            if( !department.hasOwnProperty("children") ){
-              department_option_wrapper.classList.add('sub-department');
-            }
-            let department_option_label = document.createElement('label');
-                department_option_label.classList.add('filter-option-label');
-            let department_option_input = document.createElement('input');
-                department_option_input.classList.add('department-option','filter-trigger','bt-checkbox');
-                department_option_input.type = 'checkbox';
-                department_option_input.name = department.name;
-                department_option_input.value = department.name;
-                department_option_input.disabled = 'true';
-                department_option_input.setAttribute('data-name-lowercase', department.name.toLowerCase() );
-            department_option_label.appendChild( department_option_input );
-            let department_option_check = document.createElement('span');
-                department_option_check.classList.add('checkmark');
-            department_option_label.appendChild( department_option_check );
-            let department_option_text = document.createTextNode( department.name + " (" + count + ")" );
-            department_option_label.appendChild( department_option_text );
-        department_option_wrapper.appendChild( department_option_label );
-        document.querySelector(".department-options").appendChild( department_option_wrapper );
-
-      }
-    }
-
-  }
-
-  function filterResults() {
-    // start with fresh filter
-    BTJobsDataFiltered = BTJobsData;
-
-    filterTags();
-
-    //job-type
-    var selected_job_types = document.querySelectorAll(".job-type-option:checked");
-    if (selected_job_types.length > 0) {
-      BTJobsDataFiltered = BTJobsDataFiltered.filter(function(job) {
-        if (Array.from(selected_job_types).map(function(el) { return el.value }).includes(getJobTypeName(job))) {
-          return job;
-        }
-      });
-    }
-
-    //location
-    var selected_locations = document.querySelectorAll(".location-option:checked");
-    if (selected_locations.length > 0) {
-      BTJobsDataFiltered = BTJobsDataFiltered.filter(function(job) {
-        location_match = Array.from(selected_locations).filter(function(el) {
-          return job ? job.location.name.includes(el.value) : false;
-        });
-        return location_match.length > 0 ? location_match : false;
-      });
-    }
-
-    //department
-    var selected_departments = document.querySelectorAll(".department-option:checked");
-    if (selected_departments.length > 0) {
-      BTJobsDataFiltered = BTJobsDataFiltered.filter(function(job) {
-        if (Array.from(selected_departments).map(function(el) { return el.value }).includes(getDepartmentName(job))) {
-          return job;
-        }
-      });
-    }
-
-    // keyword
-    var query = document.querySelector(".keyword-search").value;
-    if (query != "") {
-      BTJobsDataFiltered = BTJobsDataFiltered.filter(function(job) {
-        return jobKeywordSearchValues(job).toLowerCase().includes(query.toLowerCase()) ? job : false;
-      });
-    }
-
-    renderJobResults(BTJobsDataFiltered);
-
-    updateHash();
-  }
-
-  function doPaging() {
-    var pageSize = 9;
-    var realpageSize = 10;
-    var increment = 5;
-    var startPage = 0;
-    var numberPage = 0;
-    var totalItems = document.querySelectorAll(".jobs-listing .job-entry").length;
-
-    if (11 > totalItems) {
-      document.querySelector(".pagination").style.visibility = "hidden";
-      return;
-    }
-
-    var totalPages = Math.ceil(totalItems / (pageSize + 1));
-    document.querySelector(".pagination").style.visibility = "initial";
-    document.querySelector("ul.pages").innerHTML = "";
-
-    Array.apply(null, Array(totalPages)).map(function (x, i) {
-      var li = document.createElement("li");
-      var a = document.createElement("a");
-      a.href = "#";
-      a.textContent = i + 1;
-      a.dataset.page = i + 1;
-      li.appendChild(a);
-      document.querySelector("ul.pages").appendChild(li);
-    });
-
-    document.querySelector(".page-next").addEventListener("click", function () {
-      startPage += realpageSize;
-      increment += realpageSize;
-      numberPage++;
-      page();
-    });
-
-    document.querySelector(".page-prev").addEventListener("click", function () {
-      startPage -= realpageSize;
-      increment -= realpageSize;
-      numberPage--;
-      page();
-    });
-
-    var pages = document.querySelectorAll(".pages li a");
-    Array.prototype.map.call(pages, function(page) {
-      page.addEventListener("click", function(e) {
-        e.preventDefault();
-        showPage(this.textContent);
-      });
-    });
-
-    function page() {
-      var jobEntries = document.querySelectorAll(".jobs-listing .job-entry");
-      Array.prototype.map.call(jobEntries, function(jobEntry) {
-        jobEntry.style.display = "none";
-      });
-
-      Array.prototype.map.call(Array.from({ length: pageSize + 1 }), function(_, i) {
-        var itemIndex = i + startPage;
-        if (jobEntries[itemIndex]) {
-          jobEntries[itemIndex].style.display = "flex";
-        }
-      });
-
-      var pageLinks = document.querySelectorAll(".pages li a");
-      Array.prototype.map.call(pageLinks, function(pageLink) {
-        pageLink.classList.remove("active");
-      });
-      document.querySelector(
-        ".pages li a[data-page='" + (numberPage + 1) + "']"
-      ).classList.add("active");
-
-      if (numberPage + 1 == totalPages) {
-        document.querySelector(".page-next").style.display = "none";
-      } else {
-        document.querySelector(".page-next").style.display = "block";
-      }
-
-      if (numberPage + 1 == 1) {
-        document.querySelector(".page-prev").style.display = "none";
-      } else {
-        document.querySelector(".page-prev").style.display = "block";
-      }
-    }
-
-    function showPage(pageNumber) {
-      increment = pageNumber * realpageSize;
-      startPage = increment - realpageSize;
-      numberPage = pageNumber - 1;
-      page();
-    }
-
-    showPage(1);
-  }
-
-  function reset(){
-    document.querySelectorAll('.jobs-listing, .job-type-options, .location-options, .department-options').forEach(element => element.innerHTML = '');
-  }
-
-  function jobKeywordSearchValues(obj) {
-    let values = "";
-    let allowedProperties = ["data_source", "id", "internal_job_id", "name", "title", "value"];
-    for (let key in obj) {
-      if (obj.hasOwnProperty(key)) {
-        let value = obj[key];
-        if (typeof value === "object") {
-          values += " " + jobKeywordSearchValues(value, allowedProperties);
-        } else {
-          if (allowedProperties.includes(key) || Number.isInteger(key) ) {
-            values += " " + value + " ";
-          }
-        }
-      }
-    }
-    return values.trim();
-  }
-
-  function sortDepartments(departments) {
-    const sortedEntries = Object.entries(departments).sort((a, b) => {
-      const nameA = a[1]["name"].toUpperCase();
-      const nameB = b[1]["name"].toUpperCase();
-      return nameA.localeCompare(nameB);
-    });
-
-    const sortedObject = [];
-    sortedEntries.forEach(([key, value]) => {
-      sortedObject.push(value);
-    });
-    return sortedObject;
-  }
-
-  function updateHash(){
-    hashData = new Object();
-    history.replaceState(null, document.title, window.location.pathname);
-
-    //keyword
-    var query = document.querySelector(".keyword-search").value;
-    if (query != "") {
-      hashData['keyword'] = query;
-    }
-
-    //job type
-    var selected_job_types = document.querySelectorAll(".job-type-option:checked");
-    if (selected_job_types.length > 0) {
-      hashData['type'] = Array.from(document.querySelectorAll(".job-type-option:checked")).map( input => input.value ).join('|')
-    }
-
-    //location
-    var selected_locations = document.querySelectorAll(".location-option:checked");
-    if (selected_locations.length > 0) {
-      hashData['location'] = Array.from(document.querySelectorAll(".location-option:checked")).map( input => input.value ).join('|')
-    }
-
-    //department
-    var selected_departments = document.querySelectorAll(".department-option:checked");
-    if (selected_departments.length > 0) {
-      hashData['team'] = Array.from(document.querySelectorAll(".department-option:checked")).map( input => input.value ).join('|');
-    }
-
-    hashParams = new URLSearchParams( hashData );
-    if( hashParams.toString() != "" ){
-      history.pushState(null, document.title, "#" + hashParams.toString() );
-    }
-  }
-
-</script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const greenhouse_script = document.createElement('script');
-    greenhouse_script.src = "https://boards-api.greenhouse.io/v1/boards/billtrust/jobs/?callback=renderBTJobsSearch" + decodeURIComponent("%26") + "content=true";
-    document.head.appendChild(greenhouse_script);
-  });
-</script>
-            </div>
     </div>
+  </div>
 </section>
 
 </main>
