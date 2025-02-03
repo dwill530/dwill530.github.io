@@ -2193,7 +2193,7 @@ input[type="button"],
   appearance: none;
   -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-  background-color: transparent;
+  background-color: #000;
   border-radius: 0.35em;
   border: solid 3px #ca4e56;
   color: #ca4e56 !important;
