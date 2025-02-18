@@ -71,5 +71,170 @@
     <div class="form-msg">
       <p>Thank you for contacting us. We’ll reach out to you asap to schedule a free demo.</p>
     </div>
+
+    <!-- Store values to save later -->
+    <div style="display: none">
+      <input type="hidden" name="btURLSource" value="Not Provided" />
+      <input type="hidden" name="btURLMedium" value="Not Provided" />
+      <input type="hidden" name="btURLCampaign" value="Not Provided" />
+      <input type="hidden" name="btURLContent" value="Not Provided" />
+      <input type="hidden" name="btURLTerm" value="Not Provided" />
+      <input type="hidden" name="btURLGclid" value="Not Provided" />
+      <input type="hidden" name="btURLlifatid" value="Not Provided" />
+    </div>
   </body>
+  <script>
+    <!--
+    setTimeout(function () {
+      //UTM Cookies
+
+      // get cookie without js-cookie library
+      var btCookies = document.cookie
+        .split(";")
+        .map((cookie) => cookie.split("="))
+        .reduce((accumulator, [key, value]) => ({ ...accumulator, [key.trim()]: decodeURIComponent(value) }), {});
+
+      //get utm cookie values
+      var btUTMs = btCookies.utm_source;
+      var btUTMm = btCookies.utm_medium;
+      var btUTMca = btCookies.utm_campaign;
+      var btUTMco = btCookies.utm_content;
+      var btUTMt = btCookies.utm_term;
+      var btUTMgclid = btCookies.gclid; //google click id
+      var btUTMlifatid = btCookies.lifatid; //Linkedin li_fat_id
+
+      //UTMs via URL
+
+      //Get UTM query string from url
+      function getQueryVariable(variable) {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i = 0; i < vars.length; i++) {
+          var pair = vars[i].split("=");
+          if (decodeURIComponent(pair[0]) == variable) {
+            return decodeURIComponent(pair[1]);
+          }
+        }
+      }
+
+      //Store UTM query string values from url
+      var utmURLs = getQueryVariable("utm_source");
+      var utmURLm = getQueryVariable("utm_medium");
+      var utmURLca = getQueryVariable("utm_campaign");
+      var utmURLco = getQueryVariable("utm_content");
+      var utmURLt = getQueryVariable("utm_term");
+      var utmURLgclid = getQueryVariable("gclid"); //google click id
+      var utmURLlifatid = getQueryVariable("li_fat_id"); //Linkedin li_fat_id
+
+      //check if URL utm has value, if not add placeholder value
+      if (typeof utmURLs !== "undefined") {
+        document.querySelector('input[name="btURLSource"]').value = utmURLs;
+      } else {
+        document.querySelector('input[name="btURLSource"]').value = "n/a";
+      }
+
+      if (typeof utmURLm !== "undefined") {
+        document.querySelector('input[name="btURLMedium"]').value = utmURLm;
+      } else {
+        document.querySelector('input[name="btURLMedium"]').value = "n/a";
+      }
+
+      if (typeof utmURLca !== "undefined") {
+        document.querySelector('input[name="btURLCampaign"]').value = utmURLca;
+      } else {
+        document.querySelector('input[name="btURLCampaign"]').value = "n/a";
+      }
+
+      if (typeof utmURLco !== "undefined") {
+        document.querySelector('input[name="btURLContent"]').value = utmURLco;
+      } else {
+        document.querySelector('input[name="btURLContent"]').value = "n/a";
+      }
+
+      if (typeof utmURLt !== "undefined") {
+        document.querySelector('input[name="btURLTerm"]').value = utmURLt;
+      } else {
+        document.querySelector('input[name="btURLTerm"]').value = "n/a";
+      }
+
+      if (typeof utmURLgclid !== "undefined") {
+        document.querySelector('input[name="btURLGclid"]').value = utmURLgclid;
+      } else {
+        document.querySelector('input[name="btURLGclid"]').value = "n/a";
+      } //google click id
+
+      if (typeof utmURLlifatid !== "undefined") {
+        document.querySelector('input[name="btURLlifatid"]').value = utmURLlifatid;
+      } else {
+        document.querySelector('input[name="btURLlifatid"]').value = "n/a";
+      } //Linkedin li_fat_id
+
+      // Set final cookies
+      function setCookie(cName, cValue) {
+        document.cookie = cName + "=" + cValue + "; path=/";
+      }
+
+      //Get UTM values from URL
+      var utmVal = window.location.search.indexOf("?") > -1;
+
+      //If UTM contains value in URL, clear cookie values, set/store utm url values as cookie.
+      if (utmVal) {
+        console.log("utm URL has values. Clear cookie values, store utm url values");
+
+        //Campaign UTM Values
+        var fURLcampaign = document.querySelector('input[name="btURLCampaign"]').value;
+        setCookie("utm_campaign", fURLcampaign);
+
+        //Content UTM Values
+        var fURLcontent = document.querySelector('input[name="btURLContent"]').value;
+        setCookie("utm_content", fURLcontent);
+
+        //Medium UTM Values
+        var fURLmedium = document.querySelector('input[name="btURLMedium"]').value;
+        setCookie("utm_medium", fURLmedium);
+
+        //Source UTM Values
+        var fURLsource = document.querySelector('input[name="btURLSource"]').value;
+        setCookie("utm_source", fURLsource);
+
+        //Term UTM Values
+        var fURLterm = document.querySelector('input[name="btURLTerm"]').value;
+        setCookie("utm_term", fURLterm);
+
+        //GClid UTM Values
+        var fURLgclid = document.querySelector('input[name="btURLGclid"]').value; //google click id
+        setCookie("gclid", fURLgclid); //google click id
+
+        //Linkedin li_fat_id UTM Values
+        var fURLlifatid = document.querySelector('input[name="btURLlifatid"]').value; //Linkedin li_fat_id
+        setCookie("li_fat_id", fURLlifatid); //Linkedin li_fat_id
+      } else {
+        console.log("utm URL no values. Do nothing.");
+      }
+
+      //Insert Final UTM value into Marketo Form
+      if (fURLcampaign) {
+        document.querySelector('input[name="UTM_Campaign__c"]').value = fURLcampaign;
+      }
+      if (fURLcontent) {
+        document.querySelector('input[name="UTM_Content__c"]').value = fURLcontent;
+      }
+      if (fURLmedium) {
+        document.querySelector('input[name="UTM_Medium__c"]').value = fURLmedium;
+      }
+      if (fURLsource) {
+        document.querySelector('input[name="UTM_Source__c"]').value = fURLsource;
+      }
+      if (fURLterm) {
+        document.querySelector('input[name="UTM_Term__c"]').value = fURLterm;
+      }
+      if (fURLgclid) {
+        document.querySelector('input[name="Gclid__c"]').value = fURLgclid;
+      } //google click id
+      if (fURLlifatid) {
+        document.querySelector('input[name="li_fat_id__c"]').value = fURLlifatid;
+      } //Linkedin li_fat_id
+    }, 1500);
+    //-->
+  </script>
 </html>
