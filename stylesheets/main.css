@@ -2302,6 +2302,7 @@ input[type="button"]:disabled,
 .work-item h3 {
   font-size: 1.25em;
   margin: 0 0 0.5em 0;
+  font-weight: bold;
 }
 .work-item p {
   font-size: 0.9em;
