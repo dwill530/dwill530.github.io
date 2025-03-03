@@ -1855,7 +1855,7 @@ input[type="radio"] + label:before {
 .image:before {
   -webkit-transition: opacity 0.2s ease-in-out;
   transition: opacity 0.2s ease-in-out;
-  background: url("../../images/overlay.png");
+  background: url("../../images/overlay.webp");
   border-radius: 0.35em;
   content: "";
   display: block;
@@ -1894,7 +1894,7 @@ input[type="radio"] + label:before {
   opacity: 1;
 }
 .image.thumb:hover:before {
-  background: url("../../images/overlay.png"), url("../../images/overlay.png");
+  background: url("../../images/overlay.webp"), url("../../images/overlay.png");
   opacity: 1;
 }
 .image img {
@@ -2333,7 +2333,7 @@ input[type="button"]:disabled,
   justify-content: space-between;
   background-color: #1f1815;
   background-attachment: scroll, scroll;
-  background-image: url("../../images/overlay.png"), url("../../images/mtn-bg.jpg");
+  background-image: url("../../images/overlay.webp"), url("../../images/mtn-bg.jpg");
   background-position: top left, 0px -315px;
   background-repeat: repeat, no-repeat;
   background-size: auto, 150%;
@@ -2713,7 +2713,7 @@ body.is-touch .poptrox-popup .closer {
   #footer {
     background-attachment: scroll;
     background-color: #1f1815;
-    background-image: url("../../images/overlay.png"), url("../../images/trail-bg.jpg");
+    background-image: url("../../images/overlay.webp"), url("../../images/trail-bg.jpg");
     background-position: top left, bottom center;
     background-repeat: repeat, no-repeat;
     background-size: auto, cover;
